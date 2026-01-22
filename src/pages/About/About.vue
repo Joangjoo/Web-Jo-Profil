@@ -2,6 +2,8 @@
 import Navbar from '../../components/Navbar/Navbar.vue';
 import AboutHero from '../../components/About/AboutHero.vue';
 import ExperienceTimeline from '../../components/About/ExperienceTimeline.vue';
+import OrganizationTimeline from '../../components/About/OrganizationTimeline.vue';
+import EducationTimeline from '../../components/About/EducationTimeline.vue';
 </script>
 
 <template>
@@ -19,7 +21,13 @@ import ExperienceTimeline from '../../components/About/ExperienceTimeline.vue';
             <AboutHero />
 
             <!-- Experience Timeline Component -->
-            <ExperienceTimeline />
+            <ExperienceTimeline id="experience" />
+
+            <!-- Organization Timeline Component -->
+            <OrganizationTimeline id="organization" />
+
+            <!-- Education Timeline Component -->
+            <EducationTimeline id="education" />
         </div>
     </section>
 </template>

@@ -39,16 +39,18 @@ const resetTilt = () => {
 <template>
     <div ref="tiltCard" @mousemove="handleTiltMove" @mouseleave="resetTilt"
         class="relative perspective-1000 group w-full">
-        <div class="w-full relative p-4 md:p-6 bg-[#0a0a14]/80 backdrop-blur-sm border border-[#00f0ff]/10 rounded-lg transition-transform duration-100 ease-linear shadow-[0_0_20px_rgba(0,240,255,0.05)] transform-style-3d hover:border-[#00f0ff]/30"
+        <div class="w-full relative p-4 md:p-6 bg-[#0f0515]/90 backdrop-blur-sm border border-[#bc13fe]/10 rounded-lg transition-transform duration-100 ease-linear shadow-[0_0_20px_rgba(188,19,254,0.05)] transform-style-3d hover:border-[#bc13fe]/30"
             :style="{ transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)` }">
             <!-- Header -->
             <div class="flex flex-col gap-1 mb-3 relative z-10"
                 :class="index % 2 === 0 ? 'items-start' : 'md:items-end'">
-                <span class="md:hidden text-[#00f0ff] text-xs font-mono mb-1">
+                <!-- Inline Date for Mobile -->
+                <span class="md:hidden text-[#bc13fe] text-xs font-mono mb-1">
                     {{ item.year }}
                 </span>
+
                 <span
-                    class="text-[#00f0ff] text-xs font-bold tracking-wider px-2 py-0.5 rounded bg-[#00f0ff]/10 border border-[#00f0ff]/20">
+                    class="text-[#bc13fe] text-xs font-bold tracking-wider px-2 py-0.5 rounded bg-[#bc13fe]/10 border border-[#bc13fe]/20">
                     {{ item.category }}
                 </span>
                 <h4 class="text-white text-lg font-bold">{{ item.project }}</h4>
@@ -60,10 +62,10 @@ const resetTilt = () => {
                 {{ item.description }}
             </p>
 
-            <!-- Tech Tags -->
+            <!-- Skills/Tags -->
             <div class="flex flex-wrap gap-2 relative z-10"
                 :class="index % 2 === 0 ? 'justify-start' : 'md:justify-end'">
-                <span v-for="tech in item.tech" :key="tech" class="text-xs text-[#00f0ff]/80 font-mono">
+                <span v-for="tech in item.tech" :key="tech" class="text-xs text-[#bc13fe]/80 font-mono">
                     #{{ tech }}
                 </span>
             </div>

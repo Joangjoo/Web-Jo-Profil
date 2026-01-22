@@ -3,57 +3,104 @@ import { ref, computed } from 'vue';
 import Navbar from '../../components/Navbar/Navbar.vue';
 import ProjectCard from '../../components/Projects/ProjectCard.vue';
 
+// Image Imports
+import projek1 from '../../assets/projects/projek1.png';
+import projek2 from '../../assets/projects/projek2.png';
+import projek3 from '../../assets/projects/projek3.png';
+import projek4 from '../../assets/projects/projek4.png';
+import projek5 from '../../assets/projects/projek5.png';
+import projek6 from '../../assets/projects/projek6.png';
+import projek7 from '../../assets/projects/projek7.png';
+import projek8 from '../../assets/projects/projek8.png';
+import sepatu from '../../assets/projects/sepatu.png';
+
 // Filter categories
-const filters = ['All', 'Web', 'Mobile', 'UI/UX', 'AI'];
 const activeFilter = ref('All');
 
-// Placeholder Data - User to update this!
 const projects = [
     {
-        title: "Portfolio v1",
-        description: "My personal portfolio website built with Vue 3, TypeScript, and Tailwind CSS. Features 3D interactions and a cyber aesthetic.",
-        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
-        tech: ["Vue 3", "TypeScript", "Tailwind"],
+        title: "Website E-Commerce Toko Roti",
+        description: "E-commerce website for a bakery store featuring product listings, pricing display, and a simple purchasing flow with a clean and responsive layout.",
+        image: projek1,
+        tech: ["HTML", "PHP", "JavaScript", "Tailwind"],
         category: "Web",
         demoLink: "#",
         repoLink: "#"
     },
     {
-        title: "E-Commerce Dashboard",
-        description: "A comprehensive analytics dashboard for online retailers. Visualize sales data, manage inventory, and track customer trends.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-        tech: ["React", "Node.js", "MySQL"],
+        title: "Slicing UI Web Coffee",
+        description: "Frontend UI slicing project for a coffee shop website, focusing on responsive layout, visual consistency, and clean component structure.",
+        image: projek2,
+        tech: ["HTML", "CSS", "JavaScript", "Tailwind"],
         category: "Web",
         demoLink: "#",
         repoLink: "#"
     },
     {
-        title: "AI Chat Assistant",
-        description: "An intelligent chatbot integrated with OpenAI's GPT-4 API. deployed as a floating widget for easy access.",
-        image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2006&auto=format&fit=crop",
-        tech: ["Python", "OpenAI", "FastAPI"],
-        category: "AI",
+        title: "Slicing UI Web Coffee",
+        description: "Coffee shop website UI slicing with emphasis on modern design, smooth layout, and user-friendly presentation.",
+        image: projek3,
+        tech: ["HTML", "CSS", "JavaScript", "Tailwind"],
+        category: "Web",
         demoLink: "#",
         repoLink: "#"
     },
     {
-        title: "Finance Tracker App",
-        description: "Mobile application for tracking personal expenses and investments with real-time market data.",
-        image: "https://images.unsplash.com/photo-1563986768494-4dee46a38531?q=80&w=2034&auto=format&fit=crop",
-        tech: ["Flutter", "Firebase", "Dart"],
-        category: "Mobile",
+        title: "Website Destination",
+        description: "Tourism destination website showcasing local attractions with engaging visuals, structured content, and responsive design.",
+        image: projek4,
+        tech: ["HTML", "CSS", "JavaScript", "Tailwind"],
+        category: "Web",
         demoLink: "#",
         repoLink: "#"
     },
     {
-        title: "Cyberpunk UI Kit",
-        description: "A complete design system for sci-fi themed applications. Includes buttons, inputs, and layout components.",
-        image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop",
-        tech: ["Figma", "CSS", "Design"],
+        title: "Website Perpustakaan",
+        description: "Library website designed to display book collections, library information, and announcements with a responsive and accessible interface.",
+        image: projek5,
+        tech: ["React", "Tailwind CSS", "AOS"],
+        category: "Web",
+        demoLink: "#",
+        repoLink: "#"
+    },
+    {
+        title: "Student Org Database",
+        description: "Internal web system for managing student organization data, including member lists, organizational structure, and documentation records.",
+        image: projek6,
+        tech: ["HTML", "Tailwind CSS", "AOS"],
+        category: "Web",
+        demoLink: "#",
+        repoLink: "#"
+    },
+    {
+        title: "Website Budaya",
+        description: "Cultural website designed to present traditional heritage content with informative sections and modern visual layout.",
+        image: projek7,
+        tech: ["HTML", "CSS", "JavaScript", "Tailwind"],
+        category: "Web",
+        demoLink: "#",
+        repoLink: "#"
+    },
+    {
+        title: "Website Destination",
+        description: "Tourism website highlighting destinations, galleries, and descriptive content with a clean and user-friendly design.",
+        image: projek8,
+        tech: ["HTML", "CSS", "JavaScript", "Tailwind"],
+        category: "Web",
+        demoLink: "#",
+        repoLink: "#"
+    },
+    {
+        title: "Shoe Store Web Design",
+        description: "UI/UX design concept for a shoe store website with a mobile-first approach, focusing on usability, modern aesthetics, and intuitive navigation across web devices.",
+        image: sepatu,
+        tech: ["Figma", "UI/UX", "Web Design"],
         category: "UI/UX",
         demoLink: "#",
         repoLink: "#"
     }
+
+
 ];
 
 const filteredProjects = computed(() => {
@@ -77,28 +124,13 @@ const setFilter = (filter: string) => {
             <!-- Header -->
             <div class="mb-12 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold text-[#e8f4ff] mb-4 tracking-tight glitch-text"
-                    data-text="DEPLOYED PROJECTS">
-                    DEPLOYED PROJECTS
+                    data-text="PROJECTS">
+                    PROJECTS
                 </h1>
                 <p class="text-[#a0a0b0] max-w-2xl mx-auto">
                     A collection of experiments, production apps, and digital artifacts.
                     Deployed and operational.
                 </p>
-            </div>
-
-            <!-- Filter Bar -->
-            <div class="flex justify-center flex-wrap gap-4 mb-12">
-                <button v-for="filter in filters" :key="filter" @click="setFilter(filter)"
-                    class="px-4 py-2 text-sm border transition-all duration-300 relative group overflow-hidden" :class="[
-                        activeFilter === filter
-                            ? 'border-[#00f0ff] text-[#00f0ff] bg-[#00f0ff]/10 shadow-[0_0_15px_rgba(0,240,255,0.3)]'
-                            : 'border-[#4a5f7f]/50 text-[#4a5f7f] hover:border-[#00f0ff]/50 hover:text-[#e8f4ff]'
-                    ]">
-                    <!-- Glitch overlay on hover -->
-                    <span
-                        class="absolute inset-0 bg-[#00f0ff]/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
-                    <span class="relative z-10">[{{ filter }}]</span>
-                </button>
             </div>
 
             <!-- Projects Grid -->

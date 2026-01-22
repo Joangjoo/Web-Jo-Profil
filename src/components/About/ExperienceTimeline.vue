@@ -5,7 +5,7 @@ import ExperienceCard from './ExperienceCard.vue';
 interface TimelineItem {
     id: number;
     year: string;
-    category: 'Internship' | 'Freelance' | 'Personal Project' | 'Competition';
+    category: 'Internship' | 'Freelance' | 'Personal Project' | 'Competition' | 'Project School';
     role: string;
     project: string;
     description: string;
@@ -15,40 +15,58 @@ interface TimelineItem {
 const timelineData: TimelineItem[] = [
     {
         id: 1,
-        year: '2025 - Present',
+        year: 'October 2025 - January 2026',
         category: 'Internship',
         role: 'Fullstack Developer Intern',
         project: 'Horus Technology',
-        description: 'Developing scalable web applications and contributing to production features. Working with a modern stack to deliver real-world solutions.',
-        tech: ['Vue.js', 'TypeScript', 'Tailwind']
+        description: 'Contributed to the development of AI-driven enterprise software. Focused on frontend development for TING software, including UI implementation, backend API integration, and real-time data handling using Server-Sent Events (SSE). Also developed and redesigned company websites, built an Agentic AI demo, and collaborated closely with backend engineers, product teams, and the CEO.',
+        tech: ['Vue.js', 'Tailwind CSS', 'REST API', 'SSE']
     },
     {
         id: 2,
-        year: '2024',
-        category: 'Personal Project',
-        role: 'Creator & Developer',
-        project: 'School Info System',
-        description: 'Designed and developed a comprehensive information system for a local school to manage student data and academic records.',
-        tech: ['Laravel', 'MySQL', 'Bootstrap']
+        year: 'April 2025 - July 2025',
+        category: 'Internship',
+        role: 'Fullstack Developer Intern',
+        project: 'School Information System – SD Muhammadiyah Bausasran',
+        description: 'Developed a full-featured School Information System including a dynamic school profile website, admin panel, and online student admission (PPDB) system. Independently handled frontend and backend development, database management, and content management features for administrators.',
+        tech: ['Laravel', 'FilamentPHP', 'MySQL', 'Tailwind CSS']
     },
     {
         id: 3,
-        year: '2023',
+        year: '2025',
         category: 'Freelance',
-        role: 'Frontend Developer',
-        project: 'E-Commerce Dashboard',
-        description: 'Built a responsive admin dashboard for an e-commerce client, focusing on data visualization and user experience.',
-        tech: ['React', 'Tailwind', 'Chart.js']
+        role: 'Fullstack Web Developer',
+        project: 'Car Rental Website',
+        description: 'Built a responsive fullstack web application for a car rental business. Developed a Laravel backend and React TypeScript frontend, including admin features for managing vehicles, rental schedules, and customer data.',
+        tech: ['React', 'TypeScript', 'Laravel', 'FilamentPHP', 'MySQL']
     },
     {
         id: 4,
-        year: '2023',
+        year: '2025',
+        category: 'Project School',
+        role: 'Project Manager & Frontend Developer',
+        project: 'Tri Jaya Agung Business Website',
+        description: 'Developed a business profile website for a building materials store with a dynamic product catalog. Integrated an admin panel for content management and focused on clean UI/UX to improve business credibility.',
+        tech: ['React', 'TypeScript', 'Laravel', 'FilamentPHP', 'Tailwind CSS']
+    },
+    {
+        id: 5,
+        year: '2025',
+        category: 'Freelance',
+        role: 'Fullstack Web Developer',
+        project: 'Boarding School Management System',
+        description: 'Built a school management system to digitize administrative tasks, including student data management, activity scheduling, and news updates. Designed a user-friendly admin dashboard for school operators.',
+        tech: ['React', 'TypeScript', 'Laravel', 'FilamentPHP', 'MySQL']
+    },
+    {
+        id: 6,
+        year: '2024',
         category: 'Competition',
-        role: 'Team Lead',
-        project: 'Hackathon 2023',
-        description: 'Led a team of 3 to build a sustainability app prototype in 24 hours. Won "Best UI/UX" category.',
-        tech: ['Figma', 'Flutter', 'Firebase']
-    }
+        role: 'Frontend Developer',
+        project: 'Tourism Destination Website',
+        description: 'Designed and developed a responsive tourism destination website for a competition project, focusing on visual storytelling, responsive layout, and smooth animations using AOS.',
+        tech: ['HTML', 'Tailwind CSS', 'AOS']
+    },
 ];
 
 const observer = ref<IntersectionObserver | null>(null);
@@ -73,7 +91,7 @@ onMounted(() => {
         <!-- Header -->
         <div class="mb-12 text-center">
             <h3 class="text-[#00f0ff] text-xl font-bold tracking-[0.2em] mb-2 uppercase">
-                // Mission History
+                // My Experience
             </h3>
             <p class="text-[#a0a0b0] text-sm">System Logs & Experience Archive</p>
         </div>
@@ -105,12 +123,10 @@ onMounted(() => {
                     <!-- Node/Marker -->
                     <div
                         class="absolute left-4 md:left-1/2 -translate-x-[5px] md:-translate-x-1/2 w-[10px] h-[10px] rounded-full bg-[#050510] border-2 border-[#00f0ff] z-10 shadow-[0_0_10px_#00f0ff]">
-                        <div
-                            class="absolute top-1/2 left-full ml-4 md:ml-0 md:left-auto md:top-auto md:-translate-y-8 w-max">
-                            <span :class="[
-                                'text-[#00f0ff] font-bold text-sm bg-[#050510] px-2 py-1 border border-[#00f0ff]/30 rounded',
-                                index % 2 === 0 ? 'md:-translate-x-full md:-ml-8' : 'md:ml-8'
-                            ]">
+                        <div class="hidden md:block absolute top-1/2 -translate-y-1/2 w-max"
+                            :class="index % 2 === 0 ? 'right-full mr-8' : 'left-full ml-8'">
+                            <span
+                                class="text-[#00f0ff] font-bold text-sm bg-[#050510] px-2 py-1 border border-[#00f0ff]/30 rounded">
                                 {{ item.year }}
                             </span>
                         </div>

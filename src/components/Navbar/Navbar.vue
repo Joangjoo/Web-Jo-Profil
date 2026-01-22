@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, watch, nextTick } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
-import { House, User, FolderKanban, FlaskConical, MessageSquare } from 'lucide-vue-next';
+import { House, User, FolderKanban, Award, MessageSquare } from 'lucide-vue-next';
 
 const router = useRouter();
 const route = useRoute();
@@ -10,7 +10,7 @@ const links = [
     { name: 'Home', path: '/', icon: House },
     { name: 'About', path: '/about', icon: User },
     { name: 'Projects', path: '/projects', icon: FolderKanban },
-    { name: 'Lab', path: '/lab', icon: FlaskConical },
+    { name: 'Certificates', path: '/certificates', icon: Award },
     { name: 'Contact', path: '/contact', icon: MessageSquare },
 ];
 

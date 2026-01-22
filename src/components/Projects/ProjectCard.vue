@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ExternalLink, Github } from 'lucide-vue-next';
 
 interface Project {
     title: string;
@@ -66,17 +65,6 @@ const props = defineProps<{
                     </span>
                 </div>
 
-                <!-- Links -->
-                <div class="flex gap-4 mt-auto">
-                    <a v-if="project.demoLink" :href="project.demoLink" target="_blank"
-                        class="flex items-center gap-2 text-sm text-[#a0a0b0] hover:text-[#00f0ff] transition-colors">
-                        <ExternalLink class="w-4 h-4" /> Live Demo
-                    </a>
-                    <a v-if="project.repoLink" :href="project.repoLink" target="_blank"
-                        class="flex items-center gap-2 text-sm text-[#a0a0b0] hover:text-[#00f0ff] transition-colors">
-                        <Github class="w-4 h-4" /> Code
-                    </a>
-                </div>
             </div>
         </div>
     </div>

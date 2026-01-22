@@ -74,9 +74,19 @@ import joGif from '../../assets/vidio/jo.gif';
                 <div class="mt-4">
                     <h3 class="text-[#e0e0e0] font-semibold text-sm mb-4 flex items-center gap-2">
                         <span class="w-1 h-4 bg-[#00f0ff] rounded-full"></span>
-                        Tech Arsenal
+                        Tech Stack
                     </h3>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        <div
+                            class="bg-[#0a0a14] border border-[#00f0ff]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[#00f0ff]/40 transition-colors group">
+                            <span class="text-[#00f0ff] group-hover:scale-110 transition-transform">JS</span>
+                            <span class="text-xs text-[#a0a0b0]">JavaScript</span>
+                        </div>
+                        <div
+                            class="bg-[#0a0a14] border border-[#00f0ff]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[#00f0ff]/40 transition-colors group">
+                            <span class="text-[#00f0ff] group-hover:scale-110 transition-transform">PHP</span>
+                            <span class="text-xs text-[#a0a0b0]">PHP</span>
+                        </div>
                         <div
                             class="bg-[#0a0a14] border border-[#00f0ff]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[#00f0ff]/40 transition-colors group">
                             <span class="text-[#00f0ff] group-hover:scale-110 transition-transform">React</span>
@@ -104,19 +114,23 @@ import joGif from '../../assets/vidio/jo.gif';
                         </div>
                         <div
                             class="bg-[#0a0a14] border border-[#00f0ff]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[#00f0ff]/40 transition-colors group">
-                            <span class="text-[#00f0ff] group-hover:scale-110 transition-transform">Go</span>
-                            <span class="text-xs text-[#a0a0b0]">Golang</span>
-                        </div>
-                        <div
-                            class="bg-[#0a0a14] border border-[#00f0ff]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[#00f0ff]/40 transition-colors group">
                             <span class="text-[#00f0ff] group-hover:scale-110 transition-transform">TW</span>
                             <span class="text-xs text-[#a0a0b0]">Tailwind</span>
                         </div>
-                        <div
-                            class="bg-[#0a0a14] border border-[#00f0ff]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[#00f0ff]/40 transition-colors group">
-                            <span class="text-[#00f0ff] group-hover:scale-110 transition-transform">Git</span>
-                            <span class="text-xs text-[#a0a0b0]">Version Control</span>
-                        </div>
+                    </div>
+
+                    <!-- Download CV Button -->
+                    <div class="mt-8 flex justify-start">
+                        <a href="/CV_JoangjooATS.pdf" download="CV_Sholahudin_Jauhari"
+                            class="group relative inline-flex items-center gap-3 px-6 py-3 bg-[#00f0ff]/10 font-bold text-[#00f0ff] border border-[#00f0ff]/50 rounded-lg overflow-hidden transition-all duration-300 hover:bg-[#00f0ff] hover:text-[#050510] hover:scale-105 hover:shadow-[0_0_20px_rgba(0,240,255,0.4)]">
+                            <span>Download My CV</span>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-5 h-5 transition-transform group-hover:translate-y-1" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
 

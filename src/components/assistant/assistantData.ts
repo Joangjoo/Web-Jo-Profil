@@ -68,47 +68,51 @@ export const assistantKnowledge: AssistantData[] = [
       "sholahudin",
     ],
     answer:
-      "Aku adalah asisten portofolio Sholahudin Jauhari El Sya'na, seorang Frontend, Backend, dan Fullstack Developer.",
+      "Aku adalah asisten AI personal untuk Sholahudin Jauhari El Sya'na (Joangjo). Jo adalah Frontend, Backend, & Fullstack Developer yang berpengalaman dengan Vue, React, Laravel, dan FilamentPHP. Saat ini ia adalah mahasiswa Informatika di Universitas Ahmad Dahlan.",
   },
   {
-    keywords: ["kuliah", "pendidikan", "kampus", "universitas"],
+    keywords: ["kuliah", "pendidikan", "kampus", "universitas", "ipk"],
     answer:
-      "Sholahudin adalah mahasiswa Informatika Universitas Ahmad Dahlan dengan IPK 3.50 dan fokus pada pengembangan web.",
+      "Sholahudin saat ini menempuh pendidikan S1 Informatika di Universitas Ahmad Dahlan (UAD), Yogyakarta (2022 - Sekarang). Ia memiliki IPK 3.50 dan aktif dalam berbagai kegiatan akademik maupun organisasi.",
   },
   {
-    keywords: ["magang", "internship", "pengalaman kerja"],
+    keywords: ["pengalaman kerja", "magang", "internship", "horus"],
     answer:
-      "Ia pernah magang sebagai Fullstack Developer di SD Muhammadiyah Bausasran dan mengembangkan sistem informasi sekolah secara menyeluruh.",
+      "Jo memiliki pengalaman magang sebagai Fullstack Developer di Horus Technology (Okt 2025 - Jan 2026) mengerjakan software enterprise berbasis AI, dan di SD Muhammadiyah Bausasran (Apr 2025 - Jul 2025) membangun Sistem Informasi Sekolah lengkap dengan PPDB.",
   },
   {
-    keywords: ["project", "proyek", "portofolio"],
+    keywords: ["freelance", "proyek freelance", "pekerjaan lepas"],
     answer:
-      "Beberapa project yang pernah dikerjakan antara lain Sistem Informasi Sekolah, Web Rental Mobil, Website Bisnis, dan Sistem Manajemen Pondok.",
+      "Sebagai freelancer, Jo telah mengerjakan berbagai proyek fullstack seperti Website Rental Mobil (React + Laravel), Sistem Manajemen Pondok Pesantren, dan Website Profil Bisnis untuk Toko Bangunan Tri Jaya Agung.",
   },
   {
-    keywords: ["organisasi", "kepanitiaan", "bem", "hmif"],
+    keywords: ["project", "proyek", "portofolio", "karya"],
     answer:
-      "Ia aktif berorganisasi di HMIF dan BEM FTI, serta pernah menjadi ketua pelaksana beberapa event tingkat fakultas.",
+      "Beberapa proyek unggulannya meliputi: Sistem Informasi Sekolah (Laravel/FilamentPHP), Car Rental Platform (React/Laravel), Website Pariwisata (Project Kompetisi), dan Dashboard E-Commerce. Detailnya bisa dilihat di halaman Projects.",
   },
   {
-    keywords: ["skill", "keahlian"],
+    keywords: ["organisasi", "bem", "hmif", "kepanitiaan"],
     answer:
-      "Keahlian utamanya meliputi frontend dan backend web development, REST API, manajemen database, serta UI responsif.",
+      "Jo sangat aktif berorganisasi. Ia pernah menjabat sebagai Kepala Departemen Kaderisasi di BEM FTI (2024), Staff AKASTRAT di HMIF (2023), serta menjadi Ketua Pelaksana untuk Milad FTI 2024 dan Informatics Competition 2023.",
   },
   {
-    keywords: ["bahasa pemrograman"],
+    keywords: ["sertifikat", "prestasi", "penghargaan", "juara"],
     answer:
-      "Bahasa pemrograman yang dikuasai antara lain JavaScript, TypeScript, PHP, Python, Java, dan C++.",
+      "Jo meraih penghargaan 'Best Team' di FI-CHALLENGE 2023. Ia juga memiliki sertifikat kompetensi di bidang Web Design (Politeknik Negeri Bali), Leadership (BEM FTI), dan Public Speaking/Humas.",
   },
   {
-    keywords: ["tools", "alat"],
+    keywords: ["skill", "keahlian", "tech stack", "teknologi"],
     answer:
-      "Tools yang sering digunakan meliputi Laravel, React, Tailwind CSS, FilamentPHP, Git, dan Visual Studio Code.",
+      "Tech stack utamanya adalah: Languages (JS, TS, PHP), Frontend (Vue.js, React, Tailwind CSS), Backend (Laravel, FilamentPHP, MySQL), dan Tools lainnya seperti Git, Figma, dan VS Code.",
   },
   {
-    keywords: ["kontak", "email", "linkedin", "github"],
+    keywords: ["kontak", "email", "hubungi", "sosmed"],
     answer:
-      "Kontak, LinkedIn, dan GitHub dapat ditemukan di halaman portofolio ini.",
+      "Kamu bisa menghubungi Jo melalui Email (joangjo22@gmail.com), Instagram (@sholahuddin_jauhari), atau LinkedIn. Silakan kunjungi halaman Contact untuk mengirim pesan langsung.",
+  },
+  {
+    keywords: ["lokasi", "domisili", "tinggal"],
+    answer: "Saat ini Sholahudin berdomisili di Yogyakarta, Indonesia.",
   },
 ];
 
