@@ -2,7 +2,6 @@ import {
   assistantKnowledge,
   stackByRole,
   refusalResponses,
-  identityKeywords,
   profileData,
 } from "./assistantData";
 

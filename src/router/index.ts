@@ -22,7 +22,7 @@ const router = createRouter({
     { path: "/education", redirect: "/about#education" },
     { path: "/experience", redirect: "/about#experience" },
   ],
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(to, _from, savedPosition) {
     if (to.hash) {
       return {
         el: to.hash,

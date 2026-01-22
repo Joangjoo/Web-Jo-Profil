@@ -9,7 +9,7 @@ interface Project {
     repoLink?: string;
 }
 
-const props = defineProps<{
+defineProps<{
     project: Project;
     index: number;
 }>();

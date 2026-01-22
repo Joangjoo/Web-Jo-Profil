@@ -108,9 +108,7 @@ const filteredProjects = computed(() => {
     return projects.filter(p => p.category === activeFilter.value);
 });
 
-const setFilter = (filter: string) => {
-    activeFilter.value = filter;
-};
+
 </script>
 
 <template>
