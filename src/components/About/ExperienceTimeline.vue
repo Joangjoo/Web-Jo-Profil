@@ -15,6 +15,15 @@ interface TimelineItem {
 const timelineData: TimelineItem[] = [
     {
         id: 1,
+        year: 'February 2026 - April 2026',
+        category: 'Internship',
+        role: 'Backend Developer Intern',
+        project: 'PT Razen Teknologi Indonesia',
+        description: 'Contributed to the development of a Workforce Distribution & Job Readiness Information System, a multi-stakeholder platform connecting schools, students, companies, and government institutions.',
+        tech: ['React.js', 'Tailwind CSS', 'Shad CDN UI', 'Inertia', 'Laravel','Docker','PostgreSQL']
+    },
+    {
+        id: 2,
         year: 'October 2025 - January 2026',
         category: 'Internship',
         role: 'Fullstack Developer Intern',
@@ -23,7 +32,7 @@ const timelineData: TimelineItem[] = [
         tech: ['Vue.js', 'Tailwind CSS', 'REST API', 'SSE']
     },
     {
-        id: 2,
+        id: 3,
         year: 'April 2025 - July 2025',
         category: 'Internship',
         role: 'Fullstack Developer Intern',
@@ -32,7 +41,7 @@ const timelineData: TimelineItem[] = [
         tech: ['Laravel', 'FilamentPHP', 'MySQL', 'Tailwind CSS']
     },
     {
-        id: 3,
+        id: 4,
         year: '2025',
         category: 'Freelance',
         role: 'Fullstack Web Developer',
@@ -41,7 +50,7 @@ const timelineData: TimelineItem[] = [
         tech: ['React', 'TypeScript', 'Laravel', 'FilamentPHP', 'MySQL']
     },
     {
-        id: 4,
+        id: 5,
         year: '2025',
         category: 'Project School',
         role: 'Project Manager & Frontend Developer',
@@ -50,7 +59,7 @@ const timelineData: TimelineItem[] = [
         tech: ['React', 'TypeScript', 'Laravel', 'FilamentPHP', 'Tailwind CSS']
     },
     {
-        id: 5,
+        id: 6,
         year: '2025',
         category: 'Freelance',
         role: 'Fullstack Web Developer',
@@ -59,7 +68,7 @@ const timelineData: TimelineItem[] = [
         tech: ['React', 'TypeScript', 'Laravel', 'FilamentPHP', 'MySQL']
     },
     {
-        id: 6,
+        id: 7,
         year: '2024',
         category: 'Competition',
         role: 'Frontend Developer',
