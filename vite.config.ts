@@ -8,7 +8,7 @@ export default defineConfig({
     vue(),
     tailwindcss(),
     vueDevtools({
-      launchEditor: "Antigravity",
+      launchEditor: "kiro",
     }),
   ],
 });
