@@ -14,10 +14,10 @@ export const profileData = {
   nicknames: ["Jo", "Joang", "Joangjo"],
   id: "JO-007",
   role: "Frontend, Backend, & Fullstack Developer",
-  status: "Mahasiswa Informatika semester 7",
+  status: "Mahasiswa Informatika UAD",
   summaries: [
     "Sholahudin Jauhari El Sya'na adalah Fullstack Developer (Vue, React, Laravel) yang juga mahasiswa Informatika UAD. Dia berfokus pada pembuatan aplikasi web modern yang clean dan performant.",
-    "Jo adalah pengembang web kreatif dengan keahlian di Frontend (Vue/React) dan Backend (Laravel). Saat ini ia menempuh semester 7 di Universitas Ahmad Dahlan.",
+    "Jo adalah pengembang web kreatif dengan keahlian di Frontend (Vue/React) dan Backend (Laravel). Saat ini ia berkuliah di Universitas Ahmad Dahlan.",
     "Dikenal sebagai Joangjo, ia adalah mahasiswa Informatika UAD yang aktif membangun portofolio web apps, mulai dari sistem informasi sekolah hingga website bisnis, menggunakan teknologi terkini.",
     "Selain kuliah di Informatika UAD, Sholahudin aktif mengerjakan proyek freelance fullstack dan terus mendalami React serta Laravel untuk solusi digital yang efisien.",
   ],
@@ -53,7 +53,7 @@ export const stackByRole = {
 export const assistantKnowledge: AssistantData[] = [
   {
     keywords: ["kamu siapa", "siapa kamu", "profil", "tentang kamu", "jo", "joang", "joangjo", "sholahudin"],
-    answer: "Aku asisten AI untuk Sholahudin Jauhari El Sya'na (Joangjo). Jo adalah Fullstack Web Developer dan mahasiswa Informatika Universitas Ahmad Dahlan semester 7. Ia punya pengalaman dari 3 internships dan beberapa proyek freelance, plus aktif di organisasi kampus.",
+    answer: "Aku asisten AI untuk Sholahudin Jauhari El Sya'na (Joangjo). Jo adalah Fullstack Web Developer dan mahasiswa Informatika Universitas Ahmad Dahlan. Ia punya pengalaman dari 3 internships dan beberapa proyek freelance, plus aktif di organisasi kampus.",
   },
   {
     keywords: ["kuliah", "pendidikan", "kampus", "universitas", "uad", "informatika", "ipk"],
@@ -213,7 +213,7 @@ export const assistantKnowledge: AssistantData[] = [
   },
   {
     keywords: ["lulus", "tahun lulus", "target", "wisuda"],
-    answer: "Jo masih semester 7 di Informatika UAD (masuk 2022). Belum ada info pasti kapan lulus, tapi lagi aktif kuliah dan ngembangin skill.",
+    answer: "Jo masih di Informatika UAD (masuk 2022)",
   },
   {
     keywords: ["ipk", "nilai", "gpa", "akademik"],
