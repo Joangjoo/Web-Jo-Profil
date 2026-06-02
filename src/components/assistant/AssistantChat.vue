@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { ref, nextTick, watch, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { Send, Trash2, Sparkles } from 'lucide-vue-next'
 import { getAIResponse } from './assistantEngine'
+
+const { t } = useI18n()
 
 const props = defineProps<{
     isOpen: boolean
@@ -15,12 +18,12 @@ const typingIndex = ref(0)
 
 const messagesContainer = ref<HTMLElement | null>(null)
 
-const suggestedQuestions = [
-    'Siapa Jo?',
-    'Tech stack apa?',
-    'Pengalaman kerja?',
-    'Hubungi Jo',
-]
+const suggestedQuestions = computed(() => [
+    t('assistant.suggestions.0'),
+    t('assistant.suggestions.1'),
+    t('assistant.suggestions.2'),
+    t('assistant.suggestions.3'),
+])
 
 const scrollToBottom = () => {
     nextTick(() => {
@@ -99,11 +102,11 @@ watch(() => props.isOpen, (newVal) => {
             <div class="px-4 py-3 bg-[var(--accent)]/5 border-b border-[var(--accent)]/10 flex items-center justify-between">
                 <div class="flex items-center gap-2">
                     <div class="w-2 h-2 rounded-full bg-[var(--accent)] animate-pulse"></div>
-                    <span class="font-mono text-[var(--accent)] font-bold tracking-wider text-sm">JO'S ASSISTANT</span>
+                    <span class="font-mono text-[var(--accent)] font-bold tracking-wider text-sm">{{ t('assistant.header_title') }}</span>
                 </div>
                 <button v-if="messages.length > 0" @click="clearChat"
                     class="p-1.5 rounded-lg hover:bg-[var(--accent)]/10 text-[var(--text-muted)] hover:text-red-400 transition-all"
-                    title="Clear chat">
+                    :title="t('assistant.clear_tooltip')">
                     <Trash2 class="w-3.5 h-3.5" />
                 </button>
             </div>
@@ -149,7 +152,7 @@ watch(() => props.isOpen, (newVal) => {
             <div class="p-3 border-t border-[var(--accent)]/10 bg-[var(--bg-secondary)]">
                 <div
                     class="relative flex items-center bg-[var(--bg-primary)] rounded-full border border-[var(--accent)]/10 focus-within:border-[var(--accent)]/50 transition-all">
-                    <input v-model="userInput" @keyup.enter="sendMessage()" placeholder="Type a message..."
+                    <input v-model="userInput" @keyup.enter="sendMessage()" :placeholder="t('assistant.input_placeholder')"
                         class="flex-1 bg-transparent border-none text-[var(--text-primary)] text-sm px-4 py-2.5 focus:ring-0 placeholder-[var(--text-muted)]" />
                     <button @click="sendMessage()"
                         class="p-2 mr-1 rounded-full hover:bg-[var(--accent)]/20 text-[var(--accent)] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"

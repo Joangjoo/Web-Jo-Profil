@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import Navbar from '../../components/Navbar/Navbar.vue';
 import ContactInfo from '../../components/Contact/ContactInfo.vue';
 import ContactForm from '../../components/Contact/ContactForm.vue';
+
+const { t } = useI18n();
 </script>
 
 <template>
@@ -15,11 +18,11 @@ import ContactForm from '../../components/Contact/ContactForm.vue';
             <!-- Header -->
             <div class="mb-16 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold text-[var(--text-heading)] mb-4 tracking-tight glitch-text"
-                    data-text="INITIATE CONTACT">
-                    INITIATE CONTACT
+                    :data-text="t('contact.heading')">
+                    {{ t('contact.heading') }}
                 </h1>
                 <p class="text-[var(--text-nav)] max-w-2xl mx-auto font-mono">
-                    System ready for communication. Choose your channel.
+                    {{ t('contact.subtitle') }}
                 </p>
             </div>
 

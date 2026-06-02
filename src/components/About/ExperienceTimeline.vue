@@ -1,6 +1,9 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, computed, onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
 import ExperienceCard from './ExperienceCard.vue';
+
+const { t } = useI18n();
 
 interface TimelineItem {
     id: number;
@@ -12,71 +15,71 @@ interface TimelineItem {
     tech: string[];
 }
 
-const timelineData: TimelineItem[] = [
+const timelineData = computed<TimelineItem[]>(() => [
     {
         id: 1,
-        year: 'February 2026 - April 2026',
+        year: t('about.experience.entries.0.year'),
         category: 'Internship',
-        role: 'Backend Developer Intern',
-        project: 'PT Razen Teknologi Indonesia',
-        description: 'Contributed to the development of a Workforce Distribution & Job Readiness Information System, a multi-stakeholder platform connecting schools, students, companies, and government institutions.',
+        role: t('about.experience.entries.0.role'),
+        project: t('about.experience.entries.0.project'),
+        description: t('about.experience.entries.0.description'),
         tech: ['React.js', 'Tailwind CSS', 'Shad CDN UI', 'Inertia', 'Laravel','Docker','PostgreSQL']
     },
     {
         id: 2,
-        year: 'October 2025 - January 2026',
+        year: t('about.experience.entries.1.year'),
         category: 'Internship',
-        role: 'Fullstack Developer Intern',
-        project: 'Horus Technology',
-        description: 'Contributed to the development of AI-driven enterprise software. Focused on frontend development for TING software, including UI implementation, backend API integration, and real-time data handling using Server-Sent Events (SSE). Also developed and redesigned company websites, built an Agentic AI demo, and collaborated closely with backend engineers, product teams, and the CEO.',
+        role: t('about.experience.entries.1.role'),
+        project: t('about.experience.entries.1.project'),
+        description: t('about.experience.entries.1.description'),
         tech: ['Vue.js', 'Tailwind CSS', 'REST API', 'SSE']
     },
     {
         id: 3,
-        year: 'April 2025 - July 2025',
+        year: t('about.experience.entries.2.year'),
         category: 'Internship',
-        role: 'Fullstack Developer Intern',
-        project: 'School Information System – SD Muhammadiyah Bausasran',
-        description: 'Developed a full-featured School Information System including a dynamic school profile website, admin panel, and online student admission (PPDB) system. Independently handled frontend and backend development, database management, and content management features for administrators.',
+        role: t('about.experience.entries.2.role'),
+        project: t('about.experience.entries.2.project'),
+        description: t('about.experience.entries.2.description'),
         tech: ['Laravel', 'FilamentPHP', 'MySQL', 'Tailwind CSS']
     },
     {
         id: 4,
-        year: '2025',
+        year: t('about.experience.entries.3.year'),
         category: 'Freelance',
-        role: 'Fullstack Web Developer',
-        project: 'Car Rental Website',
-        description: 'Built a responsive fullstack web application for a car rental business. Developed a Laravel backend and React TypeScript frontend, including admin features for managing vehicles, rental schedules, and customer data.',
+        role: t('about.experience.entries.3.role'),
+        project: t('about.experience.entries.3.project'),
+        description: t('about.experience.entries.3.description'),
         tech: ['React', 'TypeScript', 'Laravel', 'FilamentPHP', 'MySQL']
     },
     {
         id: 5,
-        year: '2025',
+        year: t('about.experience.entries.4.year'),
         category: 'Project School',
-        role: 'Project Manager & Frontend Developer',
-        project: 'Tri Jaya Agung Business Website',
-        description: 'Developed a business profile website for a building materials store with a dynamic product catalog. Integrated an admin panel for content management and focused on clean UI/UX to improve business credibility.',
+        role: t('about.experience.entries.4.role'),
+        project: t('about.experience.entries.4.project'),
+        description: t('about.experience.entries.4.description'),
         tech: ['React', 'TypeScript', 'Laravel', 'FilamentPHP', 'Tailwind CSS']
     },
     {
         id: 6,
-        year: '2025',
+        year: t('about.experience.entries.5.year'),
         category: 'Freelance',
-        role: 'Fullstack Web Developer',
-        project: 'Boarding School Management System',
-        description: 'Built a school management system to digitize administrative tasks, including student data management, activity scheduling, and news updates. Designed a user-friendly admin dashboard for school operators.',
+        role: t('about.experience.entries.5.role'),
+        project: t('about.experience.entries.5.project'),
+        description: t('about.experience.entries.5.description'),
         tech: ['React', 'TypeScript', 'Laravel', 'FilamentPHP', 'MySQL']
     },
     {
         id: 7,
-        year: '2024',
+        year: t('about.experience.entries.6.year'),
         category: 'Competition',
-        role: 'Frontend Developer',
-        project: 'Tourism Destination Website',
-        description: 'Designed and developed a responsive tourism destination website for a competition project, focusing on visual storytelling, responsive layout, and smooth animations using AOS.',
+        role: t('about.experience.entries.6.role'),
+        project: t('about.experience.entries.6.project'),
+        description: t('about.experience.entries.6.description'),
         tech: ['HTML', 'Tailwind CSS', 'AOS']
     },
-];
+]);
 
 const observer = ref<IntersectionObserver | null>(null);
 
@@ -100,9 +103,9 @@ onMounted(() => {
         <!-- Header -->
         <div class="mb-12 text-center">
             <h3 class="text-[var(--accent)] text-xl font-bold tracking-[0.2em] mb-2 uppercase">
-                // My Experience
+                {{ t('about.experience.heading') }}
             </h3>
-            <p class="text-[var(--text-nav)] text-sm">System Logs & Experience Archive</p>
+            <p class="text-[var(--text-nav)] text-sm">{{ t('about.experience.subtitle') }}</p>
         </div>
 
         <!-- Timeline Container -->

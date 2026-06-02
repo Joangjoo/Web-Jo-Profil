@@ -1,10 +1,14 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, computed, watch, onMounted, onUnmounted } from "vue";
+import { useI18n } from 'vue-i18n'
 import Navbar from "../../components/Navbar/Navbar.vue";
 import CV from "../../cv/Sholahudin_Jauhari_El_Sya'na_CV.pdf";
 
+const { t, locale } = useI18n()
+
 const currentTime = ref("");
 let timeInterval: ReturnType<typeof setInterval> | null = null;
+let typingAbort = false;
 
 const updateTime = () => {
   const now = new Date();
@@ -12,15 +16,15 @@ const updateTime = () => {
   currentTime.value = `UTC+7 - ${timeStr}`;
 };
 
-const greeting = "Hello Everyone!";
+const greeting = computed(() => t('home.greeting'));
 
-const bioParagraphs = [
-  "Greetings.",
-  "I'm Sholahudin Jauhari El Sya'na, a Fullstack Web Developer and Informatics student at Ahmad Dahlan University. With experience from three internships and multiple freelance projects, I have developed various web-based solutions, including School Information Systems, Workforce Distribution Platforms, Rental Management Systems, and Business Profile Websites. I specialize in React, TypeScript, Laravel, FilamentPHP, and MySQL, with experience in building responsive user interfaces, REST API integrations, admin dashboards, and scalable web applications. Beyond coding, I enjoy learning new technologies, solving real-world problems, and collaborating with teams to create impactful digital products.",
-];
+const bioParagraphs = computed(() => [
+  t('home.bio_label'),
+  t('home.bio'),
+]);
 
 const displayedGreeting = ref("");
-const displayedBio = ref<string[]>(bioParagraphs.map(() => ""));
+const displayedBio = ref<string[]>([]);
 const currentTypingIndex = ref(-1); 
 const isGreetingDone = ref(false);
 
@@ -30,29 +34,42 @@ const typeText = async (
   speed = 30,
 ) => {
   for (let i = 0; i < text.length; i++) {
+    if (typingAbort) return;
     updateFn(text[i]!);
     await new Promise((resolve) => setTimeout(resolve, speed));
   }
 };
 
 const startTypingSequence = async () => {
-  // Type Greeting
-  await typeText(greeting, (char) => (displayedGreeting.value += char), 50);
+  typingAbort = false;
+  displayedGreeting.value = "";
+  displayedBio.value = bioParagraphs.value.map(() => "");
+  isGreetingDone.value = false;
+  currentTypingIndex.value = -1;
+
+  await typeText(greeting.value, (char) => (displayedGreeting.value += char), 50);
+  if (typingAbort) return;
   isGreetingDone.value = true;
   currentTypingIndex.value = 0;
 
-  // Type Bio Paragraphs
-  for (let i = 0; i < bioParagraphs.length; i++) {
+  for (let i = 0; i < bioParagraphs.value.length; i++) {
+    if (typingAbort) return;
     currentTypingIndex.value = i;
     await typeText(
-      bioParagraphs[i]!,
+      bioParagraphs.value[i]!,
       (char) => (displayedBio.value[i] += char),
       15,
     );
     await new Promise((resolve) => setTimeout(resolve, 300));
   }
-  currentTypingIndex.value = bioParagraphs.length;
+  if (typingAbort) return;
+  currentTypingIndex.value = bioParagraphs.value.length;
 };
+
+watch(locale, () => {
+  typingAbort = true;
+  setTimeout(() => startTypingSequence(), 100);
+});
 
 onMounted(() => {
   startTypingSequence();
@@ -106,9 +123,7 @@ onUnmounted(() => {
       </div>
 
       <div class="flex flex-col md:flex-row gap-4 md:gap-0">
-        <span class="text-[var(--text-muted)] w-[100px] shrink-0 text-sm mt-1"
-          >Pages.</span
-        >
+        <span class="text-[var(--text-muted)] w-[100px] shrink-0 text-sm mt-1">{{ $t('home.pages_label') }}</span>
         <div class="flex flex-col sm:flex-row gap-8 md:gap-16 flex-wrap">
           <div class="flex flex-col gap-3">
             <div
@@ -117,12 +132,12 @@ onUnmounted(() => {
             >
               <span
                 class="text-[var(--text-muted)] text-sm transition-all duration-300 group-hover:text-[var(--accent)] group-hover:scale-110 font-mono"
-                >01.</span
+                >{{ $t('home.links.01') }}</span
               >
               <router-link
                 to="/"
                 class="text-[var(--text-primary)] no-underline font-semibold border-b-2 border-[var(--accent)] transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.4)]"
-                >Home</router-link
+                >{{ $t('home.links.home') }}</router-link
               >
             </div>
             <div
@@ -131,12 +146,12 @@ onUnmounted(() => {
             >
               <span
                 class="text-[var(--text-muted)] text-sm transition-all duration-300 group-hover:text-[var(--accent)] group-hover:scale-110 font-mono"
-                >02.</span
+                >{{ $t('home.links.02') }}</span
               >
               <router-link
                 to="/about"
                 class="text-[var(--text-primary)] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.4)]"
-                >About</router-link
+                >{{ $t('home.links.about') }}</router-link
               >
             </div>
             <div
@@ -145,12 +160,12 @@ onUnmounted(() => {
             >
               <span
                 class="text-[var(--text-muted)] text-sm transition-all duration-300 group-hover:text-[var(--accent)] group-hover:scale-110 font-mono"
-                >03.</span
+                >{{ $t('home.links.03') }}</span
               >
               <router-link
                 to="/about#education"
                 class="text-[var(--text-primary)] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.4)]"
-                >Education</router-link
+                >{{ $t('home.links.education') }}</router-link
               >
             </div>
           </div>
@@ -162,12 +177,12 @@ onUnmounted(() => {
             >
               <span
                 class="text-[var(--text-muted)] text-sm transition-all duration-300 group-hover:text-[var(--accent)] group-hover:scale-110 font-mono"
-                >04.</span
+                >{{ $t('home.links.04') }}</span
               >
               <router-link
                 to="/about#experience"
                 class="text-[var(--text-primary)] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.4)]"
-                >Experience</router-link
+                >{{ $t('home.links.experience') }}</router-link
               >
             </div>
             <div
@@ -176,12 +191,12 @@ onUnmounted(() => {
             >
               <span
                 class="text-[var(--text-muted)] text-sm transition-all duration-300 group-hover:text-[var(--accent)] group-hover:scale-110 font-mono"
-                >05.</span
+                >{{ $t('home.links.05') }}</span
               >
               <router-link
                 to="/projects"
-                class="text-[var(--text-primary)] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.4)]"
-                >Projects</router-link
+                class="text-[var(--text-primary)] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)] hover:translate-x-1 hover:dropShadow-[0_0_8px_rgba(var(--accent-rgb),0.4)]"
+                >{{ $t('home.links.projects') }}</router-link
               >
             </div>
           </div>
@@ -193,12 +208,12 @@ onUnmounted(() => {
             >
               <span
                 class="text-[var(--text-muted)] text-sm transition-all duration-300 group-hover:text-[var(--accent)] group-hover:scale-110 font-mono"
-                >06.</span
+                >{{ $t('home.links.06') }}</span
               >
               <router-link
                 to="/contact"
-                class="text-[var(--text-primary)] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.4)]"
-                >Contact</router-link
+                class="text-[var(--text-primary)] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)] hover:translate-x-1 hover:dropShadow-[0_0_8px_rgba(var(--accent-rgb),0.4)]"
+                >{{ $t('home.links.contact') }}</router-link
               >
             </div>
             <div
@@ -207,13 +222,13 @@ onUnmounted(() => {
             >
               <span
                 class="text-[var(--text-muted)] text-sm transition-all duration-300 group-hover:text-[var(--accent)] group-hover:scale-110 font-mono"
-                >07.</span
+                >{{ $t('home.links.07') }}</span
               >
               <a
                 :href="CV"
                 download="CV_Sholahuddin_Jauhari.pdf"
-                class="text-[var(--text-primary)] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.4)]"
-                >Download My CV</a
+                class="text-[var(--text-primary)] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)] hover:translate-x-1 hover:dropShadow-[0_0_8px_rgba(var(--accent-rgb),0.4)]"
+                >{{ $t('home.links.download_cv') }}</a
               >
             </div>
           </div>
@@ -226,7 +241,7 @@ onUnmounted(() => {
       class="mt-12 md:absolute md:bottom-8 w-full px-8 md:px-12 flex flex-col md:flex-row justify-between text-xs text-[var(--text-muted)] text-center md:text-left gap-4 md:gap-0"
     >
       <div class="leading-relaxed">
-        Sleman, Yogyakarta - Indonesia<br />
+        {{ $t('home.footer_location') }}<br />
         {{ currentTime }}
       </div>
     </div>

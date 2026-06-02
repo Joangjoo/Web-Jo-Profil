@@ -1,0 +1,284 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "certificates": "Certificates",
+    "contact": "Contact",
+    "theme_toggle_dark": "Light Mode",
+    "theme_toggle_light": "Dark Mode",
+    "language": "Language"
+  },
+  "loading": {
+    "title": "System Start",
+    "messages": [
+      "Initializing Core Systems...",
+      "Loading Assets...",
+      "Compiling Shaders...",
+      "Establishing Secure Connection...",
+      "Access Granted."
+    ]
+  },
+  "home": {
+    "greeting": "Hello Everyone!",
+    "bio_label": "Greetings.",
+    "bio": "I'm Sholahudin Jauhari El Sya'na, a Fullstack Web Developer and Informatics student at Ahmad Dahlan University. With experience from three internships and multiple freelance projects, I have developed various web-based solutions, including School Information Systems, Workforce Distribution Platforms, Rental Management Systems, and Business Profile Websites. I specialize in React, TypeScript, Laravel, FilamentPHP, and MySQL, with experience in building responsive user interfaces, REST API integrations, admin dashboards, and scalable web applications. Beyond coding, I enjoy learning new technologies, solving real-world problems, and collaborating with teams to create impactful digital products.",
+    "pages_label": "Pages.",
+    "links": {
+      "01": "01.",
+      "02": "02.",
+      "03": "03.",
+      "04": "04.",
+      "05": "05.",
+      "06": "06.",
+      "07": "07.",
+      "home": "Home",
+      "about": "About",
+      "education": "Education",
+      "experience": "Experience",
+      "projects": "Projects",
+      "contact": "Contact",
+      "download_cv": "Download My CV"
+    },
+    "footer_location": "Sleman, Yogyakarta - Indonesia"
+  },
+  "about": {
+    "hero": {
+      "status_label": "STATUS",
+      "status_online": "Online",
+      "id_badge": "ID: JO-007",
+      "section_badge": "02. ABOUT ME",
+      "first_name": "Sholahudin",
+      "last_name": "Jauhari",
+      "role": "Fullstack Developer",
+      "bio_1": "Hey there! I'm Sholahudin, a Fullstack Web Developer and Informatics student at Ahmad Dahlan University. I enjoy building modern web applications that combine performance, scalability, and great user experiences.",
+      "bio_2": "With experience from three internships and multiple freelance projects, I've worked on School Information Systems, Workforce Distribution Platforms, Rental Management Systems, and Business Profile Websites. I specialize in React, Vue, TypeScript, Laravel, and MySQL, turning ideas into reliable and impactful digital solutions.",
+      "tech_stack_title": "Tech Stack",
+      "download_cv": "Download My CV"
+    },
+    "experience": {
+      "heading": "// My Experience",
+      "subtitle": "System Logs & Experience Archive",
+      "entries": [
+        {
+          "year": "February 2026 - April 2026",
+          "category": "Internship",
+          "role": "Backend Developer Intern",
+          "project": "PT Razen Teknologi Indonesia",
+          "description": "Contributed to the development of a Workforce Distribution & Job Readiness Information System, a multi-stakeholder platform connecting schools, students, companies, and government institutions."
+        },
+        {
+          "year": "October 2025 - January 2026",
+          "category": "Internship",
+          "role": "Fullstack Developer Intern",
+          "project": "Horus Technology",
+          "description": "Contributed to the development of AI-driven enterprise software. Focused on frontend development for TING software, including UI implementation, backend API integration, and real-time data handling using Server-Sent Events (SSE). Also developed and redesigned company websites, built an Agentic AI demo, and collaborated closely with backend engineers, product teams, and the CEO."
+        },
+        {
+          "year": "April 2025 - July 2025",
+          "category": "Internship",
+          "role": "Fullstack Developer Intern",
+          "project": "School Information System – SD Muhammadiyah Bausasran",
+          "description": "Developed a full-featured School Information System including a dynamic school profile website, admin panel, and online student admission (PPDB) system. Independently handled frontend and backend development, database management, and content management features for administrators."
+        },
+        {
+          "year": "2025",
+          "category": "Freelance",
+          "role": "Fullstack Web Developer",
+          "project": "Car Rental Website",
+          "description": "Built a responsive fullstack web application for a car rental business. Developed a Laravel backend and React TypeScript frontend, including admin features for managing vehicles, rental schedules, and customer data."
+        },
+        {
+          "year": "2025",
+          "category": "Project School",
+          "role": "Project Manager & Frontend Developer",
+          "project": "Tri Jaya Agung Business Website",
+          "description": "Developed a business profile website for a building materials store with a dynamic product catalog. Integrated an admin panel for content management and focused on clean UI/UX to improve business credibility."
+        },
+        {
+          "year": "2025",
+          "category": "Freelance",
+          "role": "Fullstack Web Developer",
+          "project": "Boarding School Management System",
+          "description": "Built a school management system to digitize administrative tasks, including student data management, activity scheduling, and news updates. Designed a user-friendly admin dashboard for school operators."
+        },
+        {
+          "year": "2024",
+          "category": "Competition",
+          "role": "Frontend Developer",
+          "project": "Tourism Destination Website",
+          "description": "Designed and developed a responsive tourism destination website for a competition project, focusing on visual storytelling, responsive layout, and smooth animations using AOS."
+        }
+      ]
+    },
+    "education": {
+      "heading": "// Education Level",
+      "subtitle": "Academic Background",
+      "entries": [
+        {
+          "year": "2022 - Present",
+          "school": "Universitas Ahmad Dahlan",
+          "degree": "Informatics, (S.Kom)",
+          "status": "Undergraduate student",
+          "location": "Yogyakarta, Indonesia"
+        }
+      ]
+    },
+    "organization": {
+      "heading": "// Organizational & Committee",
+      "subtitle": "Leadership & Event Management Archives",
+      "entries": [
+        {
+          "year": "Dec 2024",
+          "category": "Committee",
+          "role": "Chief Executive (Chairperson)",
+          "project": "FTI Anniversary (Milad FTI) 2024",
+          "description": "Led the organizing committee in designing and executing celebratory programs. Managed cross-division coordination, event timeline, and ensured smooth execution. Promoted faculty identity and unity."
+        },
+        {
+          "year": "Jan 2024 - Dec 2024",
+          "category": "Organization",
+          "role": "Head of Cadre Development Department",
+          "project": "BEM Faculty of Industrial Technology (BEM FTI)",
+          "description": "Led department planning by creating program matrices, organized leadership development agendas. Supervised department members, ensured program alignment with organizational goals. Responsible for team coordination, delegation, and communication flow."
+        },
+        {
+          "year": "Oct 2023",
+          "category": "Committee",
+          "role": "Chief Executive (Chairperson)",
+          "project": "Informatics Competition 2023 (UAD)",
+          "description": "Oversaw the entire event execution from planning to post-event evaluation. Coordinated multiple teams (technical, publication, logistics). Ensured academic and competitive standards while promoting collaboration."
+        },
+        {
+          "year": "Jan 2023 - Dec 2023",
+          "category": "Organization",
+          "role": "Staff of Strategic and Aspirational Studies (AKASTRAT)",
+          "project": "Himpunan Mahasiswa Informatika (HMIF)",
+          "description": "Served as a liaison between students and faculty. Collected and conveyed student aspirations to the department. Facilitated communication to ensure student concerns were heard."
+        }
+      ]
+    }
+  },
+  "projects": {
+    "heading": "PROJECTS",
+    "subtitle": "A collection of experiments, production apps, and digital artifacts. Deployed and operational.",
+    "empty_state": ">> NO ARTIFACTS FOUND IN THIS SECTOR <<",
+    "filter_all": "All",
+    "filter_html": "HTML/CSS",
+    "filter_react": "React",
+    "filter_laravel": "Laravel",
+    "filter_vue": "Vue",
+    "entries": [
+      {
+        "title": "Website E-Commerce Toko Roti",
+        "description": "E-commerce website for a bakery store featuring product listings, pricing display, and a simple purchasing flow with a clean and responsive layout."
+      },
+      {
+        "title": "Slicing UI Web Coffee",
+        "description": "Frontend UI slicing project for a coffee shop website, focusing on responsive layout, visual consistency, and clean component structure."
+      },
+      {
+        "title": "Slicing UI Web Coffee",
+        "description": "Coffee shop website UI slicing with emphasis on modern design, smooth layout, and user-friendly presentation."
+      },
+      {
+        "title": "Website Destination",
+        "description": "Tourism destination website showcasing local attractions with engaging visuals, structured content, and responsive design."
+      },
+      {
+        "title": "Website Perpustakaan",
+        "description": "Library website designed to display book collections, library information, and announcements with a responsive and accessible interface."
+      },
+      {
+        "title": "Student Org Database",
+        "description": "Internal web system for managing student organization data, including member lists, organizational structure, and documentation records."
+      },
+      {
+        "title": "Website Budaya",
+        "description": "Cultural website designed to present traditional heritage content with informative sections and modern visual layout."
+      },
+      {
+        "title": "Website Destination",
+        "description": "Tourism website highlighting destinations, galleries, and descriptive content with a clean and user-friendly design."
+      },
+      {
+        "title": "Shoe Store Web Design",
+        "description": "UI/UX design concept for a shoe store website with a mobile-first approach, focusing on usability, modern aesthetics, and intuitive navigation across web devices."
+      }
+    ]
+  },
+  "certificates": {
+    "heading": "ACHIEVEMENTS",
+    "subtitle": "Professional certifications, awards, and recognitions.",
+    "entries": [
+      {
+        "title": "Best Team FI-CHALLENGE",
+        "issued": "Issued on 9-11 Jan",
+        "description": "FIPEX"
+      },
+      {
+        "title": "Webinar Design Thinking",
+        "issued": "Issued on 25 Dec",
+        "description": "POLITEKNIK NEGERI SURABAYA"
+      },
+      {
+        "title": "Web Design Competition",
+        "issued": "Issued on 21-22 Sep",
+        "description": "POLITEKNIK NEGERI BALI"
+      },
+      {
+        "title": "Staff Humas HMIF",
+        "issued": "Issued on 01-05 Jan",
+        "description": "HMIF"
+      },
+      {
+        "title": "Staff Acara KPUMP",
+        "issued": "Issued on 11-17 Jan",
+        "description": "HMIF"
+      },
+      {
+        "title": "Leadership Education",
+        "issued": "Issued on 20 Oct",
+        "description": "BEM FTI UAD"
+      }
+    ]
+  },
+  "contact": {
+    "heading": "INITIATE CONTACT",
+    "subtitle": "System ready for communication. Choose your channel.",
+    "form": {
+      "heading": "SEND_MESSAGE_",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Transmit Message",
+      "submitting": "Transmitting...",
+      "success": "Message transmitted successfully! I will reply shortly.",
+      "error_required": "Please fill in all required fields.",
+      "error_failed": "Transmission failed. Please try again later."
+    },
+    "info": {
+      "heading": "CONNECT_",
+      "social": [
+        { "name": "Email" },
+        { "name": "Instagram" },
+        { "name": "LinkedIn" },
+        { "name": "TikTok" },
+        { "name": "GitHub" }
+      ]
+    }
+  },
+  "assistant": {
+    "header_title": "JO'S ASSISTANT",
+    "input_placeholder": "Type a message...",
+    "clear_tooltip": "Clear chat",
+    "suggestions": [
+      "Who is Jo?",
+      "Tech stack?",
+      "Work experience?",
+      "Contact Jo"
+    ],
+    "start_message": "Hi! I'm Jo's AI Assistant. Ask me anything about this portfolio!"
+  }
+}

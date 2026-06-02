@@ -1,8 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 import Navbar from '../../components/Navbar/Navbar.vue';
 import CertificateCard from '../../components/Certificates/CertificateCard.vue';
 import { X } from 'lucide-vue-next';
+
+const { t } = useI18n();
 
 // Image Imports
 import sertif1 from '../../assets/sertifikat/sertif1.png';
@@ -12,50 +15,50 @@ import sertif4 from '../../assets/sertifikat/sertif4.png';
 import sertif5 from '../../assets/sertifikat/sertif5.png';
 import sertif6 from '../../assets/sertifikat/sertif6.png';
 
-const certificates = [
+const certificates = computed(() => [
     {
         id: 1,
-        title: "Best Team FI-CHALLENGE",
+        title: t('certificates.entries.0.title'),
         image: sertif1,
-        issued: "Issued on 9-11 Januari",
-        description: "FIPEX"
+        issued: t('certificates.entries.0.issued'),
+        description: t('certificates.entries.0.description')
     },
     {
         id: 2,
-        title: "Webinar Design Thinking",
+        title: t('certificates.entries.1.title'),
         image: sertif2,
-        issued: "Issued on 25 Desember",
-        description: "POLITEKNIK NEGERI SURABAYA"
+        issued: t('certificates.entries.1.issued'),
+        description: t('certificates.entries.1.description')
     },
     {
         id: 3,
-        title: "Web Design Competition",
+        title: t('certificates.entries.2.title'),
         image: sertif3,
-        issued: "Issued on 21-22 September",
-        description: "POLITEKNIK NEGERI BALI"
+        issued: t('certificates.entries.2.issued'),
+        description: t('certificates.entries.2.description')
     },
     {
         id: 4,
-        title: "Staff Humas HMIF",
+        title: t('certificates.entries.3.title'),
         image: sertif4,
-        issued: "Issued on 01-05 Januari",
-        description: "HMIF"
+        issued: t('certificates.entries.3.issued'),
+        description: t('certificates.entries.3.description')
     },
     {
         id: 5,
-        title: "Staff Acara KPUMP",
+        title: t('certificates.entries.4.title'),
         image: sertif5,
-        issued: "Issued on 11-17 Januari",
-        description: "HMIF"
+        issued: t('certificates.entries.4.issued'),
+        description: t('certificates.entries.4.description')
     },
     {
         id: 6,
-        title: "Leadership Education",
+        title: t('certificates.entries.5.title'),
         image: sertif6,
-        issued: "Issued on 20 Oktober",
-        description: "BEM FTI UAD"
+        issued: t('certificates.entries.5.issued'),
+        description: t('certificates.entries.5.description')
     },
-];
+]);
 
 const selectedCert = ref<string | null>(null);
 
@@ -81,11 +84,11 @@ const closeModal = () => {
             <!-- Header -->
             <div class="mb-12 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold text-[var(--text-heading)] mb-4 tracking-tight glitch-text"
-                    data-text="ACHIEVEMENTS">
-                    ACHIEVEMENTS
+                    :data-text="t('certificates.heading')">
+                    {{ t('certificates.heading') }}
                 </h1>
                 <p class="text-[var(--text-nav)] max-w-2xl mx-auto">
-                    Professional certifications, awards, and recognitions.
+                    {{ t('certificates.subtitle') }}
                 </p>
             </div>
 

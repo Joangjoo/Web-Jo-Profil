@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 import Navbar from '../../components/Navbar/Navbar.vue';
 import ProjectCard from '../../components/Projects/ProjectCard.vue';
+
+const { t } = useI18n();
 
 // Image Imports
 import projek1 from '../../assets/projects/projek1.png';
@@ -17,10 +20,10 @@ import sepatu from '../../assets/projects/sepatu.png';
 // Filter categories
 const activeFilter = ref('All');
 
-const projects = [
+const projects = computed(() => [
     {
-        title: "Website E-Commerce Toko Roti",
-        description: "E-commerce website for a bakery store featuring product listings, pricing display, and a simple purchasing flow with a clean and responsive layout.",
+        title: t('projects.entries.0.title'),
+        description: t('projects.entries.0.description'),
         image: projek1,
         tech: ["HTML", "PHP", "JavaScript", "Tailwind"],
         category: "Web",
@@ -28,8 +31,8 @@ const projects = [
         repoLink: "#"
     },
     {
-        title: "Slicing UI Web Coffee",
-        description: "Frontend UI slicing project for a coffee shop website, focusing on responsive layout, visual consistency, and clean component structure.",
+        title: t('projects.entries.1.title'),
+        description: t('projects.entries.1.description'),
         image: projek2,
         tech: ["HTML", "CSS", "JavaScript", "Tailwind"],
         category: "Web",
@@ -37,8 +40,8 @@ const projects = [
         repoLink: "#"
     },
     {
-        title: "Slicing UI Web Coffee",
-        description: "Coffee shop website UI slicing with emphasis on modern design, smooth layout, and user-friendly presentation.",
+        title: t('projects.entries.2.title'),
+        description: t('projects.entries.2.description'),
         image: projek3,
         tech: ["HTML", "CSS", "JavaScript", "Tailwind"],
         category: "Web",
@@ -46,8 +49,8 @@ const projects = [
         repoLink: "#"
     },
     {
-        title: "Website Destination",
-        description: "Tourism destination website showcasing local attractions with engaging visuals, structured content, and responsive design.",
+        title: t('projects.entries.3.title'),
+        description: t('projects.entries.3.description'),
         image: projek4,
         tech: ["HTML", "CSS", "JavaScript", "Tailwind"],
         category: "Web",
@@ -55,8 +58,8 @@ const projects = [
         repoLink: "#"
     },
     {
-        title: "Website Perpustakaan",
-        description: "Library website designed to display book collections, library information, and announcements with a responsive and accessible interface.",
+        title: t('projects.entries.4.title'),
+        description: t('projects.entries.4.description'),
         image: projek5,
         tech: ["React", "Tailwind CSS", "AOS"],
         category: "Web",
@@ -64,8 +67,8 @@ const projects = [
         repoLink: "#"
     },
     {
-        title: "Student Org Database",
-        description: "Internal web system for managing student organization data, including member lists, organizational structure, and documentation records.",
+        title: t('projects.entries.5.title'),
+        description: t('projects.entries.5.description'),
         image: projek6,
         tech: ["HTML", "Tailwind CSS", "AOS"],
         category: "Web",
@@ -73,8 +76,8 @@ const projects = [
         repoLink: "#"
     },
     {
-        title: "Website Budaya",
-        description: "Cultural website designed to present traditional heritage content with informative sections and modern visual layout.",
+        title: t('projects.entries.6.title'),
+        description: t('projects.entries.6.description'),
         image: projek7,
         tech: ["HTML", "CSS", "JavaScript", "Tailwind"],
         category: "Web",
@@ -82,8 +85,8 @@ const projects = [
         repoLink: "#"
     },
     {
-        title: "Website Destination",
-        description: "Tourism website highlighting destinations, galleries, and descriptive content with a clean and user-friendly design.",
+        title: t('projects.entries.7.title'),
+        description: t('projects.entries.7.description'),
         image: projek8,
         tech: ["HTML", "CSS", "JavaScript", "Tailwind"],
         category: "Web",
@@ -91,21 +94,19 @@ const projects = [
         repoLink: "#"
     },
     {
-        title: "Shoe Store Web Design",
-        description: "UI/UX design concept for a shoe store website with a mobile-first approach, focusing on usability, modern aesthetics, and intuitive navigation across web devices.",
+        title: t('projects.entries.8.title'),
+        description: t('projects.entries.8.description'),
         image: sepatu,
         tech: ["Figma", "UI/UX", "Web Design"],
         category: "UI/UX",
         demoLink: "#",
         repoLink: "#"
     }
-
-
-];
+]);
 
 const filteredProjects = computed(() => {
-    if (activeFilter.value === 'All') return projects;
-    return projects.filter(p => p.category === activeFilter.value);
+    if (activeFilter.value === 'All') return projects.value;
+    return projects.value.filter(p => p.category === activeFilter.value);
 });
 
 
@@ -122,12 +123,11 @@ const filteredProjects = computed(() => {
             <!-- Header -->
             <div class="mb-12 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold text-[var(--text-heading)] mb-4 tracking-tight glitch-text"
-                    data-text="PROJECTS">
-                    PROJECTS
+                    :data-text="t('projects.heading')">
+                    {{ t('projects.heading') }}
                 </h1>
                 <p class="text-[var(--text-nav)] max-w-2xl mx-auto">
-                    A collection of experiments, production apps, and digital artifacts.
-                    Deployed and operational.
+                    {{ t('projects.subtitle') }}
                 </p>
             </div>
 
@@ -141,7 +141,7 @@ const filteredProjects = computed(() => {
 
             <!-- Empty State -->
             <div v-if="filteredProjects.length === 0" class="text-center py-20 text-[var(--text-muted)] animate-pulse">
-                >> NO ARTIFACTS FOUND IN THIS SECTOR << </div>
+                {{ t('projects.empty_state') }} </div>
             </div>
         </div>
 </template>

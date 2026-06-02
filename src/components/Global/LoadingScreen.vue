@@ -1,20 +1,23 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, computed, onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
 
+const { t } = useI18n();
 const emit = defineEmits(['finish']);
 
 const progress = ref(0);
-const messages = [
-    'Initializing Core Systems...',
-    'Loading Assets...',
-    'Compiling Shaders...',
-    'Establishing Secure Connection...',
-    'Access Granted.'
-];
-const currentMessage = ref(messages[0]);
+const messages = computed(() => [
+    t('loading.messages.0'),
+    t('loading.messages.1'),
+    t('loading.messages.2'),
+    t('loading.messages.3'),
+    t('loading.messages.4'),
+]);
+const currentMessage = ref('');
 
 onMounted(() => {
-    const duration = 2000; // 2 seconds loading
+    currentMessage.value = messages.value[0] ?? '';
+    const duration = 2000;
     const interval = 20;
     const steps = duration / interval;
     let currentStep = 0;
@@ -23,9 +26,8 @@ onMounted(() => {
         currentStep++;
         progress.value = Math.min(100, (currentStep / steps) * 100);
 
-        // Update messages based on progress
-        const messageIndex = Math.floor((progress.value / 100) * (messages.length - 1));
-        currentMessage.value = messages[messageIndex];
+        const messageIndex = Math.floor((progress.value / 100) * (messages.value.length - 1));
+        currentMessage.value = messages.value[messageIndex] ?? '';
 
         if (currentStep >= steps) {
             clearInterval(timer);
@@ -47,7 +49,7 @@ onMounted(() => {
         <div class="relative z-10 w-64 md:w-80 flex flex-col gap-4">
             <!-- Glitch Text -->
             <h1 class="text-[var(--accent)] text-2xl font-bold tracking-widest uppercase text-center animate-pulse">
-                System Start
+                {{ t('loading.title') }}
             </h1>
 
             <!-- Progress Bar Container -->

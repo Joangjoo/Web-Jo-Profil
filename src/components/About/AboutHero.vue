@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import joGif from "../../assets/vidio/jo.gif";
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -21,7 +24,7 @@ import joGif from "../../assets/vidio/jo.gif";
           >
             <img
               :src="joGif"
-              alt="Jo Animation"
+              alt="Sholahudin Jauhari"
               class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-500 scale-100 group-hover:scale-105"
             />
             <!-- Tech Overlay -->
@@ -33,16 +36,16 @@ import joGif from "../../assets/vidio/jo.gif";
                   <div
                     class="text-[var(--accent)] text-xs font-bold tracking-widest mb-1"
                   >
-                    STATUS
+                    {{ t('about.hero.status_label') }}
                   </div>
                   <div class="text-[var(--text-heading)] text-sm flex items-center gap-2">
                     <span
                       class="w-2 h-2 bg-green-500 rounded-full animate-pulse"
                     ></span>
-                    Online
+                    {{ t('about.hero.status_online') }}
                   </div>
                 </div>
-                <div class="text-[var(--accent)]/50 text-xs">ID: JO-007</div>
+                <div class="text-[var(--accent)]/50 text-xs">{{ t('about.hero.id_badge') }}</div>
               </div>
             </div>
           </div>
@@ -56,45 +59,29 @@ import joGif from "../../assets/vidio/jo.gif";
             <span
               class="px-3 py-1 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-bold tracking-wider border border-[var(--accent)]/20"
             >
-              02. ABOUT ME
+               {{ t('about.hero.section_badge') }}
             </span>
             <div class="h-px bg-[var(--accent)]/20 flex-grow"></div>
           </div>
 
           <h2 class="text-4xl md:text-5xl font-bold text-[var(--text-heading)] mb-2">
-            Sholahudin
+            {{ t('about.hero.first_name') }}
             <span
               class="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent)] to-[#0088ff]"
-              >Jauhari</span
+              >{{ t('about.hero.last_name') }}</span
             >
           </h2>
           <p class="text-[var(--text-nav)] text-lg">
-            Fullstack Developer
+            {{ t('about.hero.role') }}
           </p>
         </div>
 
         <div
           class="space-y-4 text-[var(--text-body)] leading-relaxed text-sm md:text-base"
         >
-          <p>
-            Hey there! I'm <span class="text-[var(--accent)]">Sholahudin</span>, a
-            Fullstack Web Developer and Informatics student at Ahmad Dahlan
-            University. I enjoy building modern web applications that combine
-            performance, scalability, and great user experiences.
-          </p>
+          <p>{{ t('about.hero.bio_1') }}</p>
 
-          <p>
-            With experience from three internships and multiple freelance
-            projects, I've worked on School Information Systems, Workforce
-            Distribution Platforms, Rental Management Systems, and Business
-            Profile Websites. I specialize in
-            <span class="text-[var(--accent)]">React</span>,
-            <span class="text-[var(--accent)]">Vue</span>,
-            <span class="text-[var(--accent)]">TypeScript</span>,
-            <span class="text-[var(--accent)]">Laravel</span>, and
-            <span class="text-[var(--accent)]">MySQL</span>, turning ideas into
-            reliable and impactful digital solutions.
-          </p>
+          <p>{{ t('about.hero.bio_2') }}</p>
         </div>
 
         <!-- Tech Stack Grid -->
@@ -103,7 +90,7 @@ import joGif from "../../assets/vidio/jo.gif";
             class="text-[var(--text-heading)] font-semibold text-sm mb-4 flex items-center gap-2"
           >
             <span class="w-1 h-4 bg-[var(--accent)] rounded-full"></span>
-            Tech Stack
+            {{ t('about.hero.tech_stack_title') }}
           </h3>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
             <div
@@ -187,7 +174,7 @@ import joGif from "../../assets/vidio/jo.gif";
               download="CV_Sholahudin_Jauhari"
               class="group relative inline-flex items-center gap-3 px-6 py-3 bg-[var(--accent)]/10 font-bold text-[var(--accent)] border border-[var(--accent)]/50 rounded-lg overflow-hidden transition-all duration-300 hover:bg-[var(--accent)] hover:text-[var(--bg-primary)] hover:scale-105 hover:shadow-[0_0_20px_rgba(var(--accent-rgb),0.4)]"
             >
-              <span>Download My CV</span>
+              <span>                {{ t('about.hero.download_cv') }}</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="w-5 h-5 transition-transform group-hover:translate-y-1"

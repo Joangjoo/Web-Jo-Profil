@@ -1,6 +1,9 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, computed, onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
 import EducationCard from './EducationCard.vue';
+
+const { t } = useI18n();
 
 interface EducationItem {
     id: number;
@@ -12,17 +15,17 @@ interface EducationItem {
     logo_initials: string;
 }
 
-const timelineData: EducationItem[] = [
+const timelineData = computed<EducationItem[]>(() => [
     {
         id: 1,
-        year: '2022 - Present',
-        school: 'Universitas Ahmad Dahlan',
-        degree: 'Informatika, (S.Kom)',
-        status: 'Undergraduate student',
-        location: 'Yogyakarta, Indonesia 🇮🇩',
+        year: t('about.education.entries.0.year'),
+        school: t('about.education.entries.0.school'),
+        degree: t('about.education.entries.0.degree'),
+        status: t('about.education.entries.0.status'),
+        location: t('about.education.entries.0.location'),
         logo_initials: 'UAD'
     }
-];
+]);
 
 const observer = ref<IntersectionObserver | null>(null);
 
@@ -51,9 +54,9 @@ onMounted(() => {
         <!-- Header -->
         <div class="mb-12 text-center">
             <h3 class="text-[#00ff9d] text-xl font-bold tracking-[0.2em] mb-2 uppercase">
-                // Education Level
+                {{ t('about.education.heading') }}
             </h3>
-            <p class="text-[var(--text-nav)] text-sm">Academic Background</p>
+            <p class="text-[var(--text-nav)] text-sm">{{ t('about.education.subtitle') }}</p>
         </div>
 
         <!-- Timeline Container -->

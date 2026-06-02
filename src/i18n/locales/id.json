@@ -1,0 +1,284 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "projects": "Proyek",
+    "certificates": "Sertifikat",
+    "contact": "Kontak",
+    "theme_toggle_dark": "Mode Terang",
+    "theme_toggle_light": "Mode Gelap",
+    "language": "Bahasa"
+  },
+  "loading": {
+    "title": "Memulai Sistem",
+    "messages": [
+      "Menginisialisasi Sistem Inti...",
+      "Memuat Aset...",
+      "Mengompilasi Shader...",
+      "Membangun Koneksi Aman...",
+      "Akses Diberikan."
+    ]
+  },
+  "home": {
+    "greeting": "Halo Semuanya!",
+    "bio_label": "Salam.",
+    "bio": "Saya Sholahudin Jauhari El Sya'na, seorang Fullstack Web Developer dan mahasiswa Informatika di Universitas Ahmad Dahlan. Dengan pengalaman dari tiga program magang dan berbagai proyek freelance, saya telah mengembangkan berbagai solusi berbasis web, termasuk Sistem Informasi Sekolah, Platform Distribusi Tenaga Kerja, Sistem Manajemen Rental, dan Website Profil Bisnis. Saya berspesialisasi dalam React, TypeScript, Laravel, FilamentPHP, dan MySQL, dengan pengalaman membangun antarmuka pengguna yang responsif, integrasi REST API, dashboard admin, dan aplikasi web yang skalabel.",
+    "pages_label": "Halaman.",
+    "links": {
+      "01": "01.",
+      "02": "02.",
+      "03": "03.",
+      "04": "04.",
+      "05": "05.",
+      "06": "06.",
+      "07": "07.",
+      "home": "Beranda",
+      "about": "Tentang",
+      "education": "Pendidikan",
+      "experience": "Pengalaman",
+      "projects": "Proyek",
+      "contact": "Kontak",
+      "download_cv": "Unduh CV Saya"
+    },
+    "footer_location": "Sleman, Yogyakarta - Indonesia"
+  },
+  "about": {
+    "hero": {
+      "status_label": "STATUS",
+      "status_online": "Online",
+      "id_badge": "ID: JO-007",
+      "section_badge": "02. TENTANG SAYA",
+      "first_name": "Sholahudin",
+      "last_name": "Jauhari",
+      "role": "Fullstack Developer",
+      "bio_1": "Halo! Saya Sholahudin, seorang Fullstack Web Developer dan mahasiswa Informatika di Universitas Ahmad Dahlan. Saya senang membangun aplikasi web modern yang menggabungkan performa, skalabilitas, dan pengalaman pengguna yang baik.",
+      "bio_2": "Dengan pengalaman dari tiga magang dan berbagai proyek freelance, saya telah mengerjakan Sistem Informasi Sekolah, Platform Distribusi Tenaga Kerja, Sistem Manajemen Rental, dan Website Profil Bisnis. Saya berspesialisasi dalam React, Vue, TypeScript, Laravel, dan MySQL, mengubah ide menjadi solusi digital yang andal dan berdampak.",
+      "tech_stack_title": "Tech Stack",
+      "download_cv": "Unduh CV Saya"
+    },
+    "experience": {
+      "heading": "// Pengalaman Saya",
+      "subtitle": "Log Sistem & Arsip Pengalaman",
+      "entries": [
+        {
+          "year": "Februari 2026 - April 2026",
+          "category": "Magang",
+          "role": "Backend Developer Intern",
+          "project": "PT Razen Teknologi Indonesia",
+          "description": "Berkontribusi dalam pengembangan Sistem Informasi Distribusi Tenaga Kerja & Kesiapan Kerja, sebuah platform multi-stakeholder yang menghubungkan sekolah, siswa, perusahaan, dan instansi pemerintah."
+        },
+        {
+          "year": "Oktober 2025 - Januari 2026",
+          "category": "Magang",
+          "role": "Fullstack Developer Intern",
+          "project": "Horus Technology",
+          "description": "Berkontribusi dalam pengembangan software enterprise berbasis AI. Fokus pada pengembangan frontend untuk software TING, termasuk implementasi UI, integrasi backend API, dan penanganan data real-time menggunakan Server-Sent Events (SSE). Juga mengembangkan dan mendesain ulang website perusahaan, membangun demo Agentic AI, dan berkolaborasi erat dengan backend engineer, tim produk, dan CEO."
+        },
+        {
+          "year": "April 2025 - Juli 2025",
+          "category": "Magang",
+          "role": "Fullstack Developer Intern",
+          "project": "Sistem Informasi Sekolah – SD Muhammadiyah Bausasran",
+          "description": "Mengembangkan Sistem Informasi Sekolah yang lengkap meliputi website profil sekolah dinamis, panel admin, dan sistem PPDB online. Secara mandiri menangani pengembangan frontend dan backend, manajemen database, dan fitur manajemen konten untuk administrator."
+        },
+        {
+          "year": "2025",
+          "category": "Freelance",
+          "role": "Fullstack Web Developer",
+          "project": "Website Rental Mobil",
+          "description": "Membangun aplikasi web fullstack responsif untuk bisnis rental mobil. Mengembangkan backend Laravel dan frontend React TypeScript, termasuk fitur admin untuk mengelola kendaraan, jadwal sewa, dan data pelanggan."
+        },
+        {
+          "year": "2025",
+          "category": "Proyek Sekolah",
+          "role": "Project Manager & Frontend Developer",
+          "project": "Website Bisnis Tri Jaya Agung",
+          "description": "Mengembangkan website profil bisnis untuk toko bahan bangunan dengan katalog produk dinamis. Mengintegrasikan panel admin untuk manajemen konten dan fokus pada UI/UX yang bersih untuk meningkatkan kredibilitas bisnis."
+        },
+        {
+          "year": "2025",
+          "category": "Freelance",
+          "role": "Fullstack Web Developer",
+          "project": "Sistem Manajemen Pondok Pesantren",
+          "description": "Membangun sistem manajemen sekolah untuk mendigitalisasi tugas administratif, termasuk manajemen data siswa, penjadwalan kegiatan, dan pembaruan berita. Mendesain dashboard admin yang ramah pengguna untuk operator sekolah."
+        },
+        {
+          "year": "2024",
+          "category": "Kompetisi",
+          "role": "Frontend Developer",
+          "project": "Website Destinasi Wisata",
+          "description": "Mendesain dan mengembangkan website destinasi wisata responsif untuk proyek kompetisi, berfokus pada visual storytelling, tata letak responsif, dan animasi halus menggunakan AOS."
+        }
+      ]
+    },
+    "education": {
+      "heading": "// Jenjang Pendidikan",
+      "subtitle": "Latar Belakang Akademik",
+      "entries": [
+        {
+          "year": "2022 - Sekarang",
+          "school": "Universitas Ahmad Dahlan",
+          "degree": "Informatika, (S.Kom)",
+          "status": "Mahasiswa S1",
+          "location": "Yogyakarta, Indonesia"
+        }
+      ]
+    },
+    "organization": {
+      "heading": "// Organisasi & Kepanitiaan",
+      "subtitle": "Arsip Kepemimpinan & Manajemen Acara",
+      "entries": [
+        {
+          "year": "Des 2024",
+          "category": "Kepanitiaan",
+          "role": "Ketua Pelaksana",
+          "project": "Milad FTI 2024",
+          "description": "Memimpin panitia dalam merancang dan mengeksekusi program perayaan. Mengelola koordinasi lintas divisi, timeline acara, dan memastikan kelancaran pelaksanaan. Mempromosikan identitas dan persatuan fakultas."
+        },
+        {
+          "year": "Jan 2024 - Des 2024",
+          "category": "Organisasi",
+          "role": "Kepala Departemen Kaderisasi",
+          "project": "BEM Fakultas Teknologi Industri (BEM FTI)",
+          "description": "Memimpin perencanaan departemen dengan membuat matriks program, menyelenggarakan agenda pengembangan kepemimpinan. Mengawasi anggota departemen, memastikan keselarasan program dengan tujuan organisasi. Bertanggung jawab atas koordinasi tim, delegasi, dan alur komunikasi."
+        },
+        {
+          "year": "Okt 2023",
+          "category": "Kepanitiaan",
+          "role": "Ketua Pelaksana",
+          "project": "Informatics Competition 2023 (UAD)",
+          "description": "Mengawasi seluruh pelaksanaan acara dari perencanaan hingga evaluasi pasca-acara. Mengkoordinasikan banyak tim (teknis, publikasi, logistik). Memastikan standar akademik dan kompetitif sambil mempromosikan kolaborasi."
+        },
+        {
+          "year": "Jan 2023 - Des 2023",
+          "category": "Organisasi",
+          "role": "Staff AKASTRAT",
+          "project": "Himpunan Mahasiswa Informatika (HMIF)",
+          "description": "Menjadi penghubung antara mahasiswa dan fakultas. Mengumpulkan dan menyampaikan aspirasi mahasiswa ke departemen. Memfasilitasi komunikasi untuk memastikan suara mahasiswa didengar."
+        }
+      ]
+    }
+  },
+  "projects": {
+    "heading": "PROYEK",
+    "subtitle": "Kumpulan eksperimen, aplikasi produksi, dan artefak digital. Telah di-deploy dan beroperasi.",
+    "empty_state": ">> TIDAK DITEMUKAN ARTEFAK DI SEKTOR INI <<",
+    "filter_all": "Semua",
+    "filter_html": "HTML/CSS",
+    "filter_react": "React",
+    "filter_laravel": "Laravel",
+    "filter_vue": "Vue",
+    "entries": [
+      {
+        "title": "Website E-Commerce Toko Roti",
+        "description": "Website e-commerce untuk toko roti dengan daftar produk, tampilan harga, dan alur pembelian sederhana dengan tata letak yang bersih dan responsif."
+      },
+      {
+        "title": "Slicing UI Web Coffee",
+        "description": "Proyek slicing UI frontend untuk website kedai kopi, fokus pada tata letak responsif, konsistensi visual, dan struktur komponen yang bersih."
+      },
+      {
+        "title": "Slicing UI Web Coffee",
+        "description": "Slicing UI website kedai kopi dengan penekanan pada desain modern, tata letak halus, dan presentasi yang ramah pengguna."
+      },
+      {
+        "title": "Website Destinasi",
+        "description": "Website destinasi wisata yang menampilkan atraksi lokal dengan visual menarik, konten terstruktur, dan desain responsif."
+      },
+      {
+        "title": "Website Perpustakaan",
+        "description": "Website perpustakaan yang dirancang untuk menampilkan koleksi buku, informasi perpustakaan, dan pengumuman dengan antarmuka yang responsif dan aksesibel."
+      },
+      {
+        "title": "Database Org Mahasiswa",
+        "description": "Sistem web internal untuk mengelola data organisasi mahasiswa, termasuk daftar anggota, struktur organisasi, dan catatan dokumentasi."
+      },
+      {
+        "title": "Website Budaya",
+        "description": "Website budaya yang dirancang untuk menyajikan konten warisan tradisional dengan bagian informatif dan tata letak visual modern."
+      },
+      {
+        "title": "Website Destinasi",
+        "description": "Website pariwisata yang menonjolkan destinasi, galeri, dan konten deskriptif dengan desain yang bersih dan ramah pengguna."
+      },
+      {
+        "title": "Shoe Store Web Design",
+        "description": "Konsep desain UI/UX untuk website toko sepatu dengan pendekatan mobile-first, fokus pada kegunaan, estetika modern, dan navigasi intuitif di berbagai perangkat."
+      }
+    ]
+  },
+  "certificates": {
+    "heading": "PENCAPAIAN",
+    "subtitle": "Sertifikasi profesional, penghargaan, dan pengakuan.",
+    "entries": [
+      {
+        "title": "Best Team FI-CHALLENGE",
+        "issued": "Diterbitkan 9-11 Jan",
+        "description": "FIPEX"
+      },
+      {
+        "title": "Webinar Design Thinking",
+        "issued": "Diterbitkan 25 Des",
+        "description": "POLITEKNIK NEGERI SURABAYA"
+      },
+      {
+        "title": "Web Design Competition",
+        "issued": "Diterbitkan 21-22 Sep",
+        "description": "POLITEKNIK NEGERI BALI"
+      },
+      {
+        "title": "Staff Humas HMIF",
+        "issued": "Diterbitkan 01-05 Jan",
+        "description": "HMIF"
+      },
+      {
+        "title": "Staff Acara KPUMP",
+        "issued": "Diterbitkan 11-17 Jan",
+        "description": "HMIF"
+      },
+      {
+        "title": "Leadership Education",
+        "issued": "Diterbitkan 20 Okt",
+        "description": "BEM FTI UAD"
+      }
+    ]
+  },
+  "contact": {
+    "heading": "INISIASI KONTAK",
+    "subtitle": "Sistem siap berkomunikasi. Pilih saluran Anda.",
+    "form": {
+      "heading": "KIRIM_PESAN_",
+      "name": "Nama",
+      "email": "Email",
+      "subject": "Subjek",
+      "message": "Pesan",
+      "submit": "Kirim Pesan",
+      "submitting": "Mengirim...",
+      "success": "Pesan berhasil terkirim! Saya akan membalas segera.",
+      "error_required": "Harap isi semua bidang yang wajib diisi.",
+      "error_failed": "Pengiriman gagal. Silakan coba lagi nanti."
+    },
+    "info": {
+      "heading": "TERHUBUNG_",
+      "social": [
+        { "name": "Email" },
+        { "name": "Instagram" },
+        { "name": "LinkedIn" },
+        { "name": "TikTok" },
+        { "name": "GitHub" }
+      ]
+    }
+  },
+  "assistant": {
+    "header_title": "ASISTEN JO",
+    "input_placeholder": "Ketik pesan...",
+    "clear_tooltip": "Hapus chat",
+    "suggestions": [
+      "Siapa Jo?",
+      "Tech stack?",
+      "Pengalaman kerja?",
+      "Hubungi Jo"
+    ],
+    "start_message": "Halo! Saya AI Assistant Jo. Silakan tanya apa saja tentang portofolio ini."
+  }
+}

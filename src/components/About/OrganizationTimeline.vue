@@ -1,6 +1,9 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, computed, onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
 import OrganizationCard from './OrganizationCard.vue';
+
+const { t } = useI18n();
 
 interface TimelineItem {
     id: number;
@@ -12,44 +15,44 @@ interface TimelineItem {
     tech: string[];
 }
 
-const timelineData: TimelineItem[] = [
+const timelineData = computed<TimelineItem[]>(() => [
     {
         id: 1,
-        year: 'Dec 2024',
+        year: t('about.organization.entries.0.year'),
         category: 'Committee',
-        role: 'Chief Executive (Chairperson)',
-        project: 'FTI Anniversary (Milad FTI) 2024',
-        description: 'Led the organizing committee in designing and executing celebratory programs for the Faculty of Industrial Technology. Managed coordination across divisions, event timeline, and ensured smooth execution of the anniversary series. Promoted faculty identity and unity through various internal and external events.',
+        role: t('about.organization.entries.0.role'),
+        project: t('about.organization.entries.0.project'),
+        description: t('about.organization.entries.0.description'),
         tech: ['Event Management', 'Leadership', 'Coordination']
     },
     {
         id: 2,
-        year: 'Jan 2024 - Dec 2024',
+        year: t('about.organization.entries.1.year'),
         category: 'Organization',
-        role: 'Head of Cadre Development Department',
-        project: 'BEM Faculty of Industrial Technology (BEM FTI)',
-        description: 'Led department planning by creating program matrices and organizing leadership development agendas. Supervised department members and ensured the execution of all programs aligned with organizational goals. Responsible for team coordination, delegation, and maintaining communication flow within the department.',
+        role: t('about.organization.entries.1.role'),
+        project: t('about.organization.entries.1.project'),
+        description: t('about.organization.entries.1.description'),
         tech: ['Leadership', 'Team Management', 'Strategic Planning']
     },
     {
         id: 3,
-        year: 'Oct 2023',
+        year: t('about.organization.entries.2.year'),
         category: 'Committee',
-        role: 'Chief Executive (Chairperson)',
-        project: 'Informatics Competition 2023 (UAD)',
-        description: 'Oversaw the entire event execution from planning to post-event evaluation. Coordinated multiple teams including technical, publication, and logistics divisions. Ensured the event met academic and competitive standards while promoting collaboration among participants.',
+        role: t('about.organization.entries.2.role'),
+        project: t('about.organization.entries.2.project'),
+        description: t('about.organization.entries.2.description'),
         tech: ['Project Management', 'Logistics', 'Team Leadership']
     },
     {
         id: 4,
-        year: 'Jan 2023 - Dec 2023',
+        year: t('about.organization.entries.3.year'),
         category: 'Organization',
-        role: 'Staff of Strategic and Aspirational Studies (AKASTRAT)',
-        project: 'Himpunan Mahasiswa Informatika (HMIF)',
-        description: 'Served as a liaison between students and faculty, addressing academic and campus-related issues. Collected and conveyed student aspirations to the department. Facilitated communication to ensure student concerns were heard and acted upon by the program.',
+        role: t('about.organization.entries.3.role'),
+        project: t('about.organization.entries.3.project'),
+        description: t('about.organization.entries.3.description'),
         tech: ['Communication', 'Student Advocacy', 'Problem Solving']
     }
-];
+]);
 
 const observer = ref<IntersectionObserver | null>(null);
 
@@ -78,9 +81,9 @@ onMounted(() => {
         <!-- Header -->
         <div class="mb-12 text-center">
             <h3 class="text-[#bc13fe] text-xl font-bold tracking-[0.2em] mb-2 uppercase">
-                // Organizational & Committee
+                {{ t('about.organization.heading') }}
             </h3>
-            <p class="text-[var(--text-nav)] text-sm">Leadership & Event Management Archives</p>
+            <p class="text-[var(--text-nav)] text-sm">{{ t('about.organization.subtitle') }}</p>
         </div>
 
         <!-- Timeline Container -->

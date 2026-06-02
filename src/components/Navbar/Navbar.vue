@@ -7,11 +7,11 @@ const router = useRouter();
 const route = useRoute();
 
 const links = [
-    { name: 'Home', path: '/', icon: House },
-    { name: 'About', path: '/about', icon: User },
-    { name: 'Projects', path: '/projects', icon: FolderKanban },
-    { name: 'Certificates', path: '/certificates', icon: Award },
-    { name: 'Contact', path: '/contact', icon: MessageSquare },
+    { name: 'nav.home', path: '/', icon: House },
+    { name: 'nav.about', path: '/about', icon: User },
+    { name: 'nav.projects', path: '/projects', icon: FolderKanban },
+    { name: 'nav.certificates', path: '/certificates', icon: Award },
+    { name: 'nav.contact', path: '/contact', icon: MessageSquare },
 ];
 
 const pillStyle = ref({ left: '0px', width: '0px', opacity: 0 });
@@ -101,7 +101,7 @@ onMounted(() => {
                         <!-- Expandable Text -->
                         <span
                             class="max-w-0 overflow-hidden group-hover:max-w-[100px] transition-all duration-300 ease-out text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 flex items-center">
-                            {{ link.name }}
+                            {{ $t(link.name) }}
                         </span>
                     </button>
                 </li>
