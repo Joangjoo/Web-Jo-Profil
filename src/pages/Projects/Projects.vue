@@ -114,18 +114,18 @@ const filteredProjects = computed(() => {
 <template>
     <Navbar />
 
-    <div class="min-h-screen bg-[#050510] text-[#c8d8e8] font-mono pt-24 pb-16 px-6 relative overflow-x-hidden">
+    <div class="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] font-mono pt-24 pb-16 px-6 relative overflow-x-hidden">
         <!-- Background Grid -->
-        <div class="fixed inset-0 grid-bg opacity-20 pointer-events-none"></div>
+        <div class="fixed inset-0 grid-bg opacity-[var(--grid-opacity)] pointer-events-none"></div>
 
         <div class="max-w-6xl mx-auto relative z-10">
             <!-- Header -->
             <div class="mb-12 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-[#e8f4ff] mb-4 tracking-tight glitch-text"
+                <h1 class="text-4xl md:text-5xl font-bold text-[var(--text-heading)] mb-4 tracking-tight glitch-text"
                     data-text="PROJECTS">
                     PROJECTS
                 </h1>
-                <p class="text-[#a0a0b0] max-w-2xl mx-auto">
+                <p class="text-[var(--text-nav)] max-w-2xl mx-auto">
                     A collection of experiments, production apps, and digital artifacts.
                     Deployed and operational.
                 </p>
@@ -140,7 +140,7 @@ const filteredProjects = computed(() => {
             </div>
 
             <!-- Empty State -->
-            <div v-if="filteredProjects.length === 0" class="text-center py-20 text-[#4a5f7f] animate-pulse">
+            <div v-if="filteredProjects.length === 0" class="text-center py-20 text-[var(--text-muted)] animate-pulse">
                 >> NO ARTIFACTS FOUND IN THIS SECTOR << </div>
             </div>
         </div>
@@ -149,8 +149,8 @@ const filteredProjects = computed(() => {
 <style scoped>
 .grid-bg {
     background-image:
-        linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+        linear-gradient(var(--grid-color-dim) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color-dim) 1px, transparent 1px);
     background-size: 50px 50px;
 }
 
@@ -166,7 +166,7 @@ const filteredProjects = computed(() => {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #050510;
+    background: var(--glitch-bg);
 }
 
 .glitch-text::before {

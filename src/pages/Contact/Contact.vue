@@ -7,18 +7,18 @@ import ContactForm from '../../components/Contact/ContactForm.vue';
 <template>
     <Navbar />
 
-    <div class="min-h-screen bg-[#050510] pt-24 pb-16 px-6 relative overflow-x-hidden">
+    <div class="min-h-screen bg-[var(--bg-primary)] pt-24 pb-16 px-6 relative overflow-x-hidden">
         <!-- Background Grid -->
-        <div class="fixed inset-0 grid-bg opacity-20 pointer-events-none"></div>
+        <div class="fixed inset-0 grid-bg opacity-[var(--grid-opacity)] pointer-events-none"></div>
 
         <div class="max-w-6xl mx-auto relative z-10">
             <!-- Header -->
             <div class="mb-16 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-[#e8f4ff] mb-4 tracking-tight glitch-text"
+                <h1 class="text-4xl md:text-5xl font-bold text-[var(--text-heading)] mb-4 tracking-tight glitch-text"
                     data-text="INITIATE CONTACT">
                     INITIATE CONTACT
                 </h1>
-                <p class="text-[#a0a0b0] max-w-2xl mx-auto font-mono">
+                <p class="text-[var(--text-nav)] max-w-2xl mx-auto font-mono">
                     System ready for communication. Choose your channel.
                 </p>
             </div>
@@ -41,8 +41,8 @@ import ContactForm from '../../components/Contact/ContactForm.vue';
 <style scoped>
 .grid-bg {
     background-image:
-        linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+        linear-gradient(var(--grid-color-dim) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color-dim) 1px, transparent 1px);
     background-size: 50px 50px;
 }
 
@@ -60,7 +60,7 @@ import ContactForm from '../../components/Contact/ContactForm.vue';
     left: 0;
     width: 100%;
     height: 100%;
-    background: #050510;
+    background: var(--glitch-bg);
 }
 
 .glitch-text::before {

@@ -99,20 +99,20 @@ onMounted(() => {
     <div class="relative max-w-4xl mx-auto py-12 px-4 font-mono">
         <!-- Header -->
         <div class="mb-12 text-center">
-            <h3 class="text-[#00f0ff] text-xl font-bold tracking-[0.2em] mb-2 uppercase">
+            <h3 class="text-[var(--accent)] text-xl font-bold tracking-[0.2em] mb-2 uppercase">
                 // My Experience
             </h3>
-            <p class="text-[#a0a0b0] text-sm">System Logs & Experience Archive</p>
+            <p class="text-[var(--text-nav)] text-sm">System Logs & Experience Archive</p>
         </div>
 
         <!-- Timeline Container -->
         <div class="relative">
             <!-- Central Line -->
             <div
-                class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-[#00f0ff]/0 via-[#00f0ff]/50 to-[#00f0ff]/0 md:-translate-x-1/2 overflow-hidden">
+                class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-[var(--accent)]/0 via-[var(--accent)]/50 to-[var(--accent)]/0 md:-translate-x-1/2 overflow-hidden">
                 <!-- Cyber Snake -->
                 <div
-                    class="cyber-snake absolute left-0 w-full h-[150px] bg-linear-to-b from-transparent via-[#00f0ff] to-transparent opacity-80 z-20">
+                    class="cyber-snake absolute left-0 w-full h-[150px] bg-linear-to-b from-transparent via-[var(--accent)] to-transparent opacity-80 z-20">
                 </div>
             </div>
 
@@ -131,11 +131,11 @@ onMounted(() => {
 
                     <!-- Node/Marker -->
                     <div
-                        class="absolute left-4 md:left-1/2 -translate-x-[5px] md:-translate-x-1/2 w-[10px] h-[10px] rounded-full bg-[#050510] border-2 border-[#00f0ff] z-10 shadow-[0_0_10px_#00f0ff]">
+                        class="absolute left-4 md:left-1/2 -translate-x-[5px] md:-translate-x-1/2 w-[10px] h-[10px] rounded-full bg-[var(--bg-primary)] border-2 border-[var(--accent)] z-10 shadow-[0_0_10px_var(--accent)]">
                         <div class="hidden md:block absolute top-1/2 -translate-y-1/2 w-max"
                             :class="index % 2 === 0 ? 'right-full mr-8' : 'left-full ml-8'">
                             <span
-                                class="text-[#00f0ff] font-bold text-sm bg-[#050510] px-2 py-1 border border-[#00f0ff]/30 rounded">
+                                class="text-[var(--accent)] font-bold text-sm bg-[var(--bg-primary)] px-2 py-1 border border-[var(--accent)]/30 rounded">
                                 {{ item.year }}
                             </span>
                         </div>

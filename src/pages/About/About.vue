@@ -9,11 +9,11 @@ import EducationTimeline from '../../components/About/EducationTimeline.vue';
 <template>
     <Navbar />
     <section id="about"
-        class="min-h-screen flex flex-col items-center py-24 px-8 bg-[#050510] relative overflow-hidden font-mono">
+        class="min-h-screen flex flex-col items-center py-24 px-8 bg-[var(--bg-primary)] relative overflow-hidden font-mono">
 
         <!-- Cyber Grid Background -->
-        <div class="absolute inset-0 opacity-20 pointer-events-none"
-            style="background-image: linear-gradient(#00f0ff 1px, transparent 1px), linear-gradient(90deg, #00f0ff 1px, transparent 1px); background-size: 40px 40px; mask-image: radial-gradient(circle, black 40%, transparent 70%);">
+        <div class="absolute inset-0 opacity-[var(--grid-opacity)] pointer-events-none"
+            style="background-image: linear-gradient(var(--grid-color) 1px, transparent 1px), linear-gradient(90deg, var(--grid-color) 1px, transparent 1px); background-size: 40px 40px; mask-image: radial-gradient(circle, black 40%, transparent 70%);">
         </div>
 
         <div class="relative z-10 max-w-5xl w-full flex flex-col gap-24">

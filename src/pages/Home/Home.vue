@@ -1,7 +1,16 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import Navbar from "../../components/Navbar/Navbar.vue";
 import CV from "../../cv/Sholahudin_Jauhari_El_Sya'na_CV.pdf";
+
+const currentTime = ref("");
+let timeInterval: ReturnType<typeof setInterval> | null = null;
+
+const updateTime = () => {
+  const now = new Date();
+  const timeStr = now.toLocaleTimeString("en-US", { hour12: false });
+  currentTime.value = `UTC+7 - ${timeStr}`;
+};
 
 const greeting = "Hello Everyone!";
 
@@ -47,34 +56,44 @@ const startTypingSequence = async () => {
 
 onMounted(() => {
   startTypingSequence();
+  updateTime();
+  timeInterval = setInterval(updateTime, 1000);
+});
+
+onUnmounted(() => {
+  if (timeInterval) clearInterval(timeInterval);
 });
 </script>
 
 <template>
   <Navbar />
-  <div
-    class="min-h-screen flex flex-col justify-center items-center p-8 pt-20 text-[#c8d8e8] font-mono bg-[#050510]"
+  <section
+    class="min-h-screen flex flex-col justify-center items-center p-8 pt-20 text-[var(--text-primary)] font-mono bg-[var(--bg-primary)] relative overflow-hidden"
     id="home"
   >
+    <!-- Cyber Grid Background -->
+    <div class="absolute inset-0 opacity-[var(--grid-opacity)] pointer-events-none"
+      style="background-image: linear-gradient(var(--grid-color) 1px, transparent 1px), linear-gradient(90deg, var(--grid-color) 1px, transparent 1px); background-size: 40px 40px; mask-image: radial-gradient(circle, black 40%, transparent 70%);">
+    </div>
     <div class="max-w-[900px] w-full">
       <h1
-        class="text-4xl font-bold mb-8 tracking-wide min-h-[3rem] text-[#e8f4ff]"
+        class="text-4xl font-bold mb-8 tracking-wide min-h-[3rem] text-[var(--text-heading)]"
       >
         {{ displayedGreeting
-        }}<span class="animate-pulse text-[#00d4ff]" v-if="!isGreetingDone"
+        }}<span class="animate-pulse text-[var(--accent)]" v-if="!isGreetingDone"
           >|</span
         >
       </h1>
 
       <div class="flex flex-col md:flex-row gap-4 md:gap-0 mb-12">
-        <span class="text-[#4a5f7f] w-[100px] shrink-0 text-sm mt-1">
+        <span class="text-[var(--text-muted)] w-[100px] shrink-0 text-sm mt-1">
           {{ displayedBio[0] }}
         </span>
         <div class="flex flex-col gap-4">
           <p
             v-for="(text, index) in displayedBio.slice(1)"
             :key="index"
-            class="leading-relaxed text-sm text-[#c8d8e8] m-0 text-justify"
+            class="leading-relaxed text-sm text-[var(--text-primary)] m-0 text-justify"
           >
             {{ text
             }}<span
@@ -87,7 +106,7 @@ onMounted(() => {
       </div>
 
       <div class="flex flex-col md:flex-row gap-4 md:gap-0">
-        <span class="text-[#4a5f7f] w-[100px] shrink-0 text-sm mt-1"
+        <span class="text-[var(--text-muted)] w-[100px] shrink-0 text-sm mt-1"
           >Pages.</span
         >
         <div class="flex flex-col sm:flex-row gap-8 md:gap-16 flex-wrap">
@@ -97,12 +116,12 @@ onMounted(() => {
               style="--delay: 0s"
             >
               <span
-                class="text-[#4a5f7f] text-sm transition-all duration-300 group-hover:text-[#00d4ff] group-hover:scale-110 font-mono"
+                class="text-[var(--text-muted)] text-sm transition-all duration-300 group-hover:text-[var(--accent)] group-hover:scale-110 font-mono"
                 >01.</span
               >
               <router-link
                 to="/"
-                class="text-[#c8d8e8] no-underline font-semibold border-b-2 border-[#0088cc] transition-all duration-300 hover:text-[#00d4ff] hover:border-[#00d4ff] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.4)]"
+                class="text-[var(--text-primary)] no-underline font-semibold border-b-2 border-[var(--accent)] transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.4)]"
                 >Home</router-link
               >
             </div>
@@ -111,12 +130,12 @@ onMounted(() => {
               style="--delay: 0.1s"
             >
               <span
-                class="text-[#4a5f7f] text-sm transition-all duration-300 group-hover:text-[#00d4ff] group-hover:scale-110 font-mono"
+                class="text-[var(--text-muted)] text-sm transition-all duration-300 group-hover:text-[var(--accent)] group-hover:scale-110 font-mono"
                 >02.</span
               >
               <router-link
                 to="/about"
-                class="text-[#c8d8e8] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[#00d4ff] hover:border-[#00d4ff] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.4)]"
+                class="text-[var(--text-primary)] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.4)]"
                 >About</router-link
               >
             </div>
@@ -125,12 +144,12 @@ onMounted(() => {
               style="--delay: 0.2s"
             >
               <span
-                class="text-[#4a5f7f] text-sm transition-all duration-300 group-hover:text-[#00d4ff] group-hover:scale-110 font-mono"
+                class="text-[var(--text-muted)] text-sm transition-all duration-300 group-hover:text-[var(--accent)] group-hover:scale-110 font-mono"
                 >03.</span
               >
               <router-link
                 to="/about#education"
-                class="text-[#c8d8e8] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[#00d4ff] hover:border-[#00d4ff] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.4)]"
+                class="text-[var(--text-primary)] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.4)]"
                 >Education</router-link
               >
             </div>
@@ -142,12 +161,12 @@ onMounted(() => {
               style="--delay: 0.3s"
             >
               <span
-                class="text-[#4a5f7f] text-sm transition-all duration-300 group-hover:text-[#00d4ff] group-hover:scale-110 font-mono"
+                class="text-[var(--text-muted)] text-sm transition-all duration-300 group-hover:text-[var(--accent)] group-hover:scale-110 font-mono"
                 >04.</span
               >
               <router-link
                 to="/about#experience"
-                class="text-[#c8d8e8] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[#00d4ff] hover:border-[#00d4ff] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.4)]"
+                class="text-[var(--text-primary)] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.4)]"
                 >Experience</router-link
               >
             </div>
@@ -156,12 +175,12 @@ onMounted(() => {
               style="--delay: 0.4s"
             >
               <span
-                class="text-[#4a5f7f] text-sm transition-all duration-300 group-hover:text-[#00d4ff] group-hover:scale-110 font-mono"
+                class="text-[var(--text-muted)] text-sm transition-all duration-300 group-hover:text-[var(--accent)] group-hover:scale-110 font-mono"
                 >05.</span
               >
               <router-link
                 to="/projects"
-                class="text-[#c8d8e8] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[#00d4ff] hover:border-[#00d4ff] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.4)]"
+                class="text-[var(--text-primary)] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.4)]"
                 >Projects</router-link
               >
             </div>
@@ -173,12 +192,12 @@ onMounted(() => {
               style="--delay: 0.5s"
             >
               <span
-                class="text-[#4a5f7f] text-sm transition-all duration-300 group-hover:text-[#00d4ff] group-hover:scale-110 font-mono"
+                class="text-[var(--text-muted)] text-sm transition-all duration-300 group-hover:text-[var(--accent)] group-hover:scale-110 font-mono"
                 >06.</span
               >
               <router-link
                 to="/contact"
-                class="text-[#c8d8e8] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[#00d4ff] hover:border-[#00d4ff] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.4)]"
+                class="text-[var(--text-primary)] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.4)]"
                 >Contact</router-link
               >
             </div>
@@ -187,13 +206,13 @@ onMounted(() => {
               style="--delay: 0.6s"
             >
               <span
-                class="text-[#4a5f7f] text-sm transition-all duration-300 group-hover:text-[#00d4ff] group-hover:scale-110 font-mono"
+                class="text-[var(--text-muted)] text-sm transition-all duration-300 group-hover:text-[var(--accent)] group-hover:scale-110 font-mono"
                 >07.</span
               >
               <a
                 :href="CV"
                 download="CV_Sholahuddin_Jauhari.pdf"
-                class="text-[#c8d8e8] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[#00d4ff] hover:border-[#00d4ff] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.4)]"
+                class="text-[var(--text-primary)] no-underline font-semibold border-b-2 border-transparent transition-all duration-300 hover:text-[var(--accent)] hover:border-[var(--accent)] hover:translate-x-1 hover:drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.4)]"
                 >Download My CV</a
               >
             </div>
@@ -204,14 +223,14 @@ onMounted(() => {
 
     <!-- Footer -->
     <div
-      class="mt-12 md:absolute md:bottom-8 w-full px-8 md:px-12 flex flex-col md:flex-row justify-between text-xs text-[#4a5f7f] text-center md:text-left gap-4 md:gap-0"
+      class="mt-12 md:absolute md:bottom-8 w-full px-8 md:px-12 flex flex-col md:flex-row justify-between text-xs text-[var(--text-muted)] text-center md:text-left gap-4 md:gap-0"
     >
       <div class="leading-relaxed">
         Sleman, Yogyakarta - Indonesia<br />
-        UTC+7 - 14:37:50
+        {{ currentTime }}
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
@@ -244,9 +263,9 @@ onMounted(() => {
   transform: translateY(-50%);
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #00d4ff, #0088cc);
+  background: linear-gradient(90deg, var(--accent), var(--accent));
   transition: width 0.3s ease;
-  box-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
+  box-shadow: 0 0 8px rgba(var(--accent-rgb), 0.6);
 }
 
 .page-link-item:hover a::before {

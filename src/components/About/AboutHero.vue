@@ -6,18 +6,18 @@ import joGif from "../../assets/vidio/jo.gif";
   <div class="relative z-10 max-w-5xl w-full flex flex-col gap-24">
     <!-- Glassmorphism Card -->
     <div
-      class="bg-[#0a0a14]/60 backdrop-blur-xl border border-[#00f0ff]/20 rounded-3xl p-8 md:p-12 shadow-[0_0_40px_rgba(0,240,255,0.1)] flex flex-col md:flex-row gap-12 items-center"
+      class="bg-[var(--bg-secondary)]/60 backdrop-blur-xl border border-[var(--accent)]/20 rounded-3xl p-8 md:p-12 shadow-[0_0_40px_rgba(var(--accent-rgb),0.1)] flex flex-col md:flex-row gap-12 items-center"
     >
       <!-- Profile Visual -->
       <div class="w-full md:w-1/3 flex flex-col items-center gap-6">
         <div class="relative group">
           <!-- Rotating Border Effect -->
           <div
-            class="absolute -inset-1 bg-gradient-to-r from-[#00f0ff] to-[#0044ff] rounded-2xl blur opacity-40 group-hover:opacity-75 transition duration-500 animate-tilt"
+            class="absolute -inset-1 bg-gradient-to-r from-[var(--accent)] to-[#0044ff] rounded-2xl blur opacity-40 group-hover:opacity-75 transition duration-500 animate-tilt"
           ></div>
 
           <div
-            class="relative rounded-2xl overflow-hidden border-2 border-[#00f0ff]/30 w-[280px] h-[350px] bg-[#050510]"
+            class="relative rounded-2xl overflow-hidden border-2 border-[var(--accent)]/30 w-[280px] h-[350px] bg-[var(--bg-primary)]"
           >
             <img
               :src="joGif"
@@ -26,23 +26,23 @@ import joGif from "../../assets/vidio/jo.gif";
             />
             <!-- Tech Overlay -->
             <div
-              class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#050510] to-transparent"
+              class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[var(--bg-primary)] to-transparent"
             >
               <div class="flex justify-between items-end">
                 <div>
                   <div
-                    class="text-[#00f0ff] text-xs font-bold tracking-widest mb-1"
+                    class="text-[var(--accent)] text-xs font-bold tracking-widest mb-1"
                   >
                     STATUS
                   </div>
-                  <div class="text-white text-sm flex items-center gap-2">
+                  <div class="text-[var(--text-heading)] text-sm flex items-center gap-2">
                     <span
                       class="w-2 h-2 bg-green-500 rounded-full animate-pulse"
                     ></span>
                     Online
                   </div>
                 </div>
-                <div class="text-[#00f0ff]/50 text-xs">ID: JO-007</div>
+                <div class="text-[var(--accent)]/50 text-xs">ID: JO-007</div>
               </div>
             </div>
           </div>
@@ -54,30 +54,30 @@ import joGif from "../../assets/vidio/jo.gif";
         <div>
           <div class="flex items-center gap-3 mb-4">
             <span
-              class="px-3 py-1 rounded-full bg-[#00f0ff]/10 text-[#00f0ff] text-xs font-bold tracking-wider border border-[#00f0ff]/20"
+              class="px-3 py-1 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-bold tracking-wider border border-[var(--accent)]/20"
             >
               02. ABOUT ME
             </span>
-            <div class="h-px bg-[#00f0ff]/20 flex-grow"></div>
+            <div class="h-px bg-[var(--accent)]/20 flex-grow"></div>
           </div>
 
-          <h2 class="text-4xl md:text-5xl font-bold text-white mb-2">
+          <h2 class="text-4xl md:text-5xl font-bold text-[var(--text-heading)] mb-2">
             Sholahudin
             <span
-              class="text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] to-[#0088ff]"
+              class="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent)] to-[#0088ff]"
               >Jauhari</span
             >
           </h2>
-          <p class="text-[#a0a0b0] text-lg">
+          <p class="text-[var(--text-nav)] text-lg">
             Fullstack Developer
           </p>
         </div>
 
         <div
-          class="space-y-4 text-[#c0c0d0] leading-relaxed text-sm md:text-base"
+          class="space-y-4 text-[var(--text-body)] leading-relaxed text-sm md:text-base"
         >
           <p>
-            Hey there! I'm <span class="text-[#00f0ff]">Sholahudin</span>, a
+            Hey there! I'm <span class="text-[var(--accent)]">Sholahudin</span>, a
             Fullstack Web Developer and Informatics student at Ahmad Dahlan
             University. I enjoy building modern web applications that combine
             performance, scalability, and great user experiences.
@@ -88,11 +88,11 @@ import joGif from "../../assets/vidio/jo.gif";
             projects, I've worked on School Information Systems, Workforce
             Distribution Platforms, Rental Management Systems, and Business
             Profile Websites. I specialize in
-            <span class="text-[#00f0ff]">React</span>,
-            <span class="text-[#00f0ff]">Vue</span>,
-            <span class="text-[#00f0ff]">TypeScript</span>,
-            <span class="text-[#00f0ff]">Laravel</span>, and
-            <span class="text-[#00f0ff]">MySQL</span>, turning ideas into
+            <span class="text-[var(--accent)]">React</span>,
+            <span class="text-[var(--accent)]">Vue</span>,
+            <span class="text-[var(--accent)]">TypeScript</span>,
+            <span class="text-[var(--accent)]">Laravel</span>, and
+            <span class="text-[var(--accent)]">MySQL</span>, turning ideas into
             reliable and impactful digital solutions.
           </p>
         </div>
@@ -100,83 +100,83 @@ import joGif from "../../assets/vidio/jo.gif";
         <!-- Tech Stack Grid -->
         <div class="mt-4">
           <h3
-            class="text-[#e0e0e0] font-semibold text-sm mb-4 flex items-center gap-2"
+            class="text-[var(--text-heading)] font-semibold text-sm mb-4 flex items-center gap-2"
           >
-            <span class="w-1 h-4 bg-[#00f0ff] rounded-full"></span>
+            <span class="w-1 h-4 bg-[var(--accent)] rounded-full"></span>
             Tech Stack
           </h3>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
             <div
-              class="bg-[#0a0a14] border border-[#00f0ff]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[#00f0ff]/40 transition-colors group"
+              class="bg-[var(--bg-secondary)] border border-[var(--accent)]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[var(--accent)]/40 transition-colors group"
             >
               <span
-                class="text-[#00f0ff] group-hover:scale-110 transition-transform"
+                class="text-[var(--accent)] group-hover:scale-110 transition-transform"
                 >JS</span
               >
-              <span class="text-xs text-[#a0a0b0]">JavaScript</span>
+              <span class="text-xs text-[var(--text-nav)]">JavaScript</span>
             </div>
             <div
-              class="bg-[#0a0a14] border border-[#00f0ff]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[#00f0ff]/40 transition-colors group"
+              class="bg-[var(--bg-secondary)] border border-[var(--accent)]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[var(--accent)]/40 transition-colors group"
             >
               <span
-                class="text-[#00f0ff] group-hover:scale-110 transition-transform"
+                class="text-[var(--accent)] group-hover:scale-110 transition-transform"
                 >PHP</span
               >
-              <span class="text-xs text-[#a0a0b0]">PHP</span>
+              <span class="text-xs text-[var(--text-nav)]">PHP</span>
             </div>
             <div
-              class="bg-[#0a0a14] border border-[#00f0ff]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[#00f0ff]/40 transition-colors group"
+              class="bg-[var(--bg-secondary)] border border-[var(--accent)]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[var(--accent)]/40 transition-colors group"
             >
               <span
-                class="text-[#00f0ff] group-hover:scale-110 transition-transform"
+                class="text-[var(--accent)] group-hover:scale-110 transition-transform"
                 >React</span
               >
-              <span class="text-xs text-[#a0a0b0]">React.js</span>
+              <span class="text-xs text-[var(--text-nav)]">React.js</span>
             </div>
             <div
-              class="bg-[#0a0a14] border border-[#00f0ff]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[#00f0ff]/40 transition-colors group"
+              class="bg-[var(--bg-secondary)] border border-[var(--accent)]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[var(--accent)]/40 transition-colors group"
             >
               <span
-                class="text-[#00f0ff] group-hover:scale-110 transition-transform"
+                class="text-[var(--accent)] group-hover:scale-110 transition-transform"
                 >Vue</span
               >
-              <span class="text-xs text-[#a0a0b0]">Vue 3</span>
+              <span class="text-xs text-[var(--text-nav)]">Vue 3</span>
             </div>
             <div
-              class="bg-[#0a0a14] border border-[#00f0ff]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[#00f0ff]/40 transition-colors group"
+              class="bg-[var(--bg-secondary)] border border-[var(--accent)]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[var(--accent)]/40 transition-colors group"
             >
               <span
-                class="text-[#00f0ff] group-hover:scale-110 transition-transform"
+                class="text-[var(--accent)] group-hover:scale-110 transition-transform"
                 >TS</span
               >
-              <span class="text-xs text-[#a0a0b0]">TypeScript</span>
+              <span class="text-xs text-[var(--text-nav)]">TypeScript</span>
             </div>
             <div
-              class="bg-[#0a0a14] border border-[#00f0ff]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[#00f0ff]/40 transition-colors group"
+              class="bg-[var(--bg-secondary)] border border-[var(--accent)]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[var(--accent)]/40 transition-colors group"
             >
               <span
-                class="text-[#00f0ff] group-hover:scale-110 transition-transform"
+                class="text-[var(--accent)] group-hover:scale-110 transition-transform"
                 >Laravel</span
               >
-              <span class="text-xs text-[#a0a0b0]">Laravel</span>
+              <span class="text-xs text-[var(--text-nav)]">Laravel</span>
             </div>
             <div
-              class="bg-[#0a0a14] border border-[#00f0ff]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[#00f0ff]/40 transition-colors group"
+              class="bg-[var(--bg-secondary)] border border-[var(--accent)]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[var(--accent)]/40 transition-colors group"
             >
               <span
-                class="text-[#00f0ff] group-hover:scale-110 transition-transform"
+                class="text-[var(--accent)] group-hover:scale-110 transition-transform"
                 >SQL</span
               >
-              <span class="text-xs text-[#a0a0b0]">MySQL</span>
+              <span class="text-xs text-[var(--text-nav)]">MySQL</span>
             </div>
             <div
-              class="bg-[#0a0a14] border border-[#00f0ff]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[#00f0ff]/40 transition-colors group"
+              class="bg-[var(--bg-secondary)] border border-[var(--accent)]/10 rounded-lg p-3 flex items-center gap-2 hover:border-[var(--accent)]/40 transition-colors group"
             >
               <span
-                class="text-[#00f0ff] group-hover:scale-110 transition-transform"
+                class="text-[var(--accent)] group-hover:scale-110 transition-transform"
                 >TW</span
               >
-              <span class="text-xs text-[#a0a0b0]">Tailwind</span>
+              <span class="text-xs text-[var(--text-nav)]">Tailwind</span>
             </div>
           </div>
 
@@ -185,7 +185,7 @@ import joGif from "../../assets/vidio/jo.gif";
             <a
               href="/Sholahudin_Jauhari_El_Sya'na_CV.pdf"
               download="CV_Sholahudin_Jauhari"
-              class="group relative inline-flex items-center gap-3 px-6 py-3 bg-[#00f0ff]/10 font-bold text-[#00f0ff] border border-[#00f0ff]/50 rounded-lg overflow-hidden transition-all duration-300 hover:bg-[#00f0ff] hover:text-[#050510] hover:scale-105 hover:shadow-[0_0_20px_rgba(0,240,255,0.4)]"
+              class="group relative inline-flex items-center gap-3 px-6 py-3 bg-[var(--accent)]/10 font-bold text-[var(--accent)] border border-[var(--accent)]/50 rounded-lg overflow-hidden transition-all duration-300 hover:bg-[var(--accent)] hover:text-[var(--bg-primary)] hover:scale-105 hover:shadow-[0_0_20px_rgba(var(--accent-rgb),0.4)]"
             >
               <span>Download My CV</span>
               <svg

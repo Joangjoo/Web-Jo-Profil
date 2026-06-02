@@ -39,7 +39,7 @@ const resetTilt = () => {
 <template>
     <div ref="tiltCard" @mousemove="handleTiltMove" @mouseleave="resetTilt"
         class="relative perspective-1000 group w-full min-w-[300px] md:min-w-[450px]">
-        <div class="w-full relative p-6 bg-[#020b06]/90 backdrop-blur-xl border border-[#00ff9d]/20 rounded-xl transition-all duration-300 ease-out shadow-[0_0_20px_rgba(0,255,157,0.05)] transform-style-3d hover:border-[#00ff9d]/50 hover:shadow-[0_0_30px_rgba(0,255,157,0.1)]"
+        <div class="w-full relative p-6 bg-[var(--bg-card-edu)]/90 backdrop-blur-xl border border-[#00ff9d]/20 rounded-xl transition-all duration-300 ease-out shadow-[0_0_20px_rgba(0,255,157,0.05)] transform-style-3d hover:border-[#00ff9d]/50 hover:shadow-[0_0_30px_rgba(0,255,157,0.1)]"
             :style="{ transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)` }">
 
             <div class="flex items-start gap-4 relatie z-10">
@@ -57,16 +57,16 @@ const resetTilt = () => {
                             {{ item.year }}
                         </span>
 
-                        <h4 class="text-white text-lg font-bold">{{ item.school }}</h4>
+                        <h4 class="text-[var(--text-heading)] text-lg font-bold">{{ item.school }}</h4>
                         <div class="flex flex-wrap items-center gap-2 text-sm">
                             <span class="text-[#00ff9d] font-medium">{{ item.status }}</span>
-                            <span class="text-[#a0a0b0]">•</span>
-                            <span class="text-[#c0c0d0]">{{ item.degree }}</span>
+                            <span class="text-[var(--text-nav)]">•</span>
+                            <span class="text-[var(--text-body)]">{{ item.degree }}</span>
                         </div>
                     </div>
 
                     <!-- Meta -->
-                    <div class="flex items-center gap-2 text-[#a0a0b0] text-xs mt-3">
+                    <div class="flex items-center gap-2 text-[var(--text-nav)] text-xs mt-3">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

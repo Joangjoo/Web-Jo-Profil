@@ -73,18 +73,18 @@ const closeModal = () => {
 <template>
     <Navbar />
 
-    <div class="min-h-screen bg-[#050510] pt-24 pb-16 px-6 font-mono relative overflow-hidden">
+    <div class="min-h-screen bg-[var(--bg-primary)] pt-24 pb-16 px-6 font-mono relative overflow-hidden">
         <!-- Background Grid -->
-        <div class="fixed inset-0 grid-bg opacity-20 pointer-events-none"></div>
+        <div class="fixed inset-0 grid-bg opacity-[var(--grid-opacity)] pointer-events-none"></div>
 
         <div class="max-w-6xl mx-auto relative z-10">
             <!-- Header -->
             <div class="mb-12 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-[#e8f4ff] mb-4 tracking-tight glitch-text"
+                <h1 class="text-4xl md:text-5xl font-bold text-[var(--text-heading)] mb-4 tracking-tight glitch-text"
                     data-text="ACHIEVEMENTS">
                     ACHIEVEMENTS
                 </h1>
-                <p class="text-[#a0a0b0] max-w-2xl mx-auto">
+                <p class="text-[var(--text-nav)] max-w-2xl mx-auto">
                     Professional certifications, awards, and recognitions.
                 </p>
             </div>
@@ -103,14 +103,14 @@ const closeModal = () => {
                 class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
                 @click="closeModal">
 
-                <button class="absolute top-6 right-6 text-white hover:text-[#00f0ff] transition-colors"
+                <button class="absolute top-6 right-6 text-white hover:text-[var(--accent)] transition-colors"
                     @click="closeModal">
                     <X class="w-8 h-8" />
                 </button>
 
                 <div class="relative max-w-5xl max-h-[90vh] w-full" @click.stop>
                     <img :src="selectedCert"
-                        class="w-full h-full object-contain rounded-lg border border-[#00f0ff]/30 shadow-[0_0_50px_rgba(0,240,255,0.2)]" />
+                        class="w-full h-full object-contain rounded-lg border border-[var(--accent)]/30 shadow-[0_0_50px_rgba(var(--accent-rgb),0.2)]" />
                 </div>
             </div>
         </Transition>
@@ -120,8 +120,8 @@ const closeModal = () => {
 <style scoped>
 .grid-bg {
     background-image:
-        linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+        linear-gradient(var(--grid-color-dim) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color-dim) 1px, transparent 1px);
     background-size: 50px 50px;
 }
 
@@ -137,7 +137,7 @@ const closeModal = () => {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #050510;
+    background: var(--glitch-bg);
 }
 
 .glitch-text::before {

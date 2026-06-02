@@ -81,7 +81,7 @@ onMounted(() => {
 <template>
     <nav class="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-auto">
         <div
-            class="bg-[#0a0a14]/80 backdrop-blur-md border border-[#00f0ff]/10 rounded-full px-2 py-2 shadow-lg shadow-black/50">
+            class="bg-[var(--navbar-bg)] backdrop-blur-md border border-[var(--accent)]/10 rounded-full px-2 py-2 shadow-lg shadow-[var(--shadow-color)]">
             <ul class="flex gap-1 list-none m-0 p-0 relative items-center" ref="navListRef">
                 <!-- Pill (Active Background) -->
                 <div class="nav-pill" :style="{
@@ -93,8 +93,8 @@ onMounted(() => {
                 <!-- Items -->
                 <li v-for="link in links" :key="link.name" class="z-10 flex relative group">
                     <button :data-path="link.path" @click="navigateTo(link)"
-                        class="flex items-center justify-center text-[#a0a0b0] transition-colors duration-300 px-4 py-2.5 rounded-full relative cursor-pointer bg-transparent border-none gap-2 hover:text-white overflow-hidden"
-                        :class="{ 'text-[#00f0ff]': route.path === link.path }">
+                        class="flex items-center justify-center text-[var(--text-nav)] transition-colors duration-300 px-4 py-2.5 rounded-full relative cursor-pointer bg-transparent border-none gap-2 hover:text-[var(--text-heading)] overflow-hidden"
+                        :class="{ 'text-[var(--accent)]': route.path === link.path }">
                         <!-- Icon -->
                         <component :is="link.icon" class="w-5 h-5 relative z-10 shrink-0" />
 
@@ -131,8 +131,8 @@ onMounted(() => {
     left: 15%;
     width: 70%;
     height: 3px;
-    background: #00f0ff;
+    background: var(--accent);
     border-radius: 2px;
-    box-shadow: 0 0 10px #00f0ff;
+    box-shadow: 0 0 10px var(--accent);
 }
 </style>

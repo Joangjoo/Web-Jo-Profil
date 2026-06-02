@@ -49,10 +49,10 @@ const handleSubmit = async () => {
         };
 
         await emailjs.send(
-            'service_5l2es2w',
-            'template_i8au2te',
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
             templateParams,
-            'mKYhRO4a8TgPYmQU3'
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         );
 
         showNotification('Message transmitted successfully! I will reply shortly.');
@@ -67,11 +67,11 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-    <div class="bg-[#0a0a14] p-8 rounded-xl border border-[#2d2d3a] relative overflow-hidden">
+    <div class="bg-[var(--bg-secondary)] p-8 rounded-xl border border-[var(--border-color)] relative overflow-hidden">
         <!-- Decoration -->
-        <div class="absolute top-0 right-0 w-20 h-20 bg-[#00f0ff]/5 rounded-bl-full pointer-events-none"></div>
+        <div class="absolute top-0 right-0 w-20 h-20 bg-[var(--accent)]/5 rounded-bl-full pointer-events-none"></div>
 
-        <h2 class="text-2xl font-bold text-[#e8f4ff] font-mono mb-6 flex items-center gap-3">
+        <h2 class="text-2xl font-bold text-[var(--text-heading)] font-mono mb-6 flex items-center gap-3">
             <span class="w-2 h-8 bg-[#bc13fe]"></span>
             SEND_MESSAGE_
         </h2>
@@ -79,35 +79,35 @@ const handleSubmit = async () => {
         <form @submit.prevent="handleSubmit" class="space-y-6 relative">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="space-y-2">
-                    <label class="text-xs font-mono text-[#00f0ff] uppercase tracking-wider">Name</label>
+                    <label class="text-xs font-mono text-[var(--accent)] uppercase tracking-wider">Name</label>
                     <input v-model="form.name" type="text" required
-                        class="w-full bg-[#050510] border border-[#2d2d3a] rounded p-3 text-[#e8f4ff] focus:border-[#00f0ff] focus:outline-none transition-colors font-mono placeholder:text-[#2d2d3a]"
+                        class="w-full bg-[var(--bg-primary)] border border-[var(--border-color)] rounded p-3 text-[var(--text-heading)] focus:border-[var(--accent)] focus:outline-none transition-colors font-mono placeholder:text-[var(--border-color)]"
                          />
                 </div>
                 <div class="space-y-2">
-                    <label class="text-xs font-mono text-[#00f0ff] uppercase tracking-wider">Email</label>
+                    <label class="text-xs font-mono text-[var(--accent)] uppercase tracking-wider">Email</label>
                     <input v-model="form.email" type="email" required
-                        class="w-full bg-[#050510] border border-[#2d2d3a] rounded p-3 text-[#e8f4ff] focus:border-[#00f0ff] focus:outline-none transition-colors font-mono placeholder:text-[#2d2d3a]"
+                        class="w-full bg-[var(--bg-primary)] border border-[var(--border-color)] rounded p-3 text-[var(--text-heading)] focus:border-[var(--accent)] focus:outline-none transition-colors font-mono placeholder:text-[var(--border-color)]"
                          />
                 </div>
             </div>
 
             <div class="space-y-2">
-                <label class="text-xs font-mono text-[#00f0ff] uppercase tracking-wider">Subject</label>
+                <label class="text-xs font-mono text-[var(--accent)] uppercase tracking-wider">Subject</label>
                 <input v-model="form.subject" type="text" required
-                    class="w-full bg-[#050510] border border-[#2d2d3a] rounded p-3 text-[#e8f4ff] focus:border-[#00f0ff] focus:outline-none transition-colors font-mono placeholder:text-[#2d2d3a]"
+                    class="w-full bg-[var(--bg-primary)] border border-[var(--border-color)] rounded p-3 text-[var(--text-heading)] focus:border-[var(--accent)] focus:outline-none transition-colors font-mono placeholder:text-[var(--border-color)]"
                      />
             </div>
 
             <div class="space-y-2">
-                <label class="text-xs font-mono text-[#00f0ff] uppercase tracking-wider">Message</label>
+                <label class="text-xs font-mono text-[var(--accent)] uppercase tracking-wider">Message</label>
                 <textarea v-model="form.message" required rows="5"
-                    class="w-full bg-[#050510] border border-[#2d2d3a] rounded p-3 text-[#e8f4ff] focus:border-[#00f0ff] focus:outline-none transition-colors font-mono placeholder:text-[#2d2d3a] resize-none"
+                    class="w-full bg-[var(--bg-primary)] border border-[var(--border-color)] rounded p-3 text-[var(--text-heading)] focus:border-[var(--accent)] focus:outline-none transition-colors font-mono placeholder:text-[var(--border-color)] resize-none"
                      ></textarea>
             </div>
 
             <button type="submit" :disabled="isSubmitting"
-                class="w-full bg-[#00f0ff]/10 border border-[#00f0ff] text-[#00f0ff] py-4 rounded font-mono font-bold uppercase tracking-widest hover:bg-[#00f0ff] hover:text-[#050510] transition-all duration-300 flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed">
+                class="w-full bg-[var(--accent)]/10 border border-[var(--accent)] text-[var(--accent)] py-4 rounded font-mono font-bold uppercase tracking-widest hover:bg-[var(--accent)] hover:text-[var(--bg-primary)] transition-all duration-300 flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed">
                 <span v-if="!isSubmitting">Transmit Message</span>
                 <span v-else>Transmitting...</span>
                 <Send v-if="!isSubmitting" class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -121,7 +121,7 @@ const handleSubmit = async () => {
             leave-to-class="transform translate-y-5 opacity-0">
             <div v-if="notification.show"
                 class="absolute bottom-4 left-4 right-4 p-4 rounded-lg flex items-center gap-3 shadow-lg border"
-                :class="notification.type === 'success' ? 'bg-[#00f0ff]/10 border-[#00f0ff] text-[#00f0ff]' : 'bg-red-500/10 border-red-500 text-red-500'">
+                :class="notification.type === 'success' ? 'bg-[var(--accent)]/10 border-[var(--accent)] text-[var(--accent)]' : 'bg-red-500/10 border-red-500 text-red-500'">
                 <CheckCircle2 v-if="notification.type === 'success'" class="w-5 h-5 shrink-0" />
                 <AlertCircle v-else class="w-5 h-5 shrink-0" />
                 <span class="text-sm font-mono">{{ notification.message }}</span>

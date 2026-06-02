@@ -7,8 +7,8 @@ const socialLinks = [
         value: 'joangjo22@gmail.com',
         icon: Mail,
         link: 'mailto:joangjo22@gmail.com',
-        color: 'text-[#00f0ff]',
-        borderColor: 'border-[#00f0ff]'
+        color: 'text-[var(--accent)]',
+        borderColor: 'border-[var(--accent)]'
     },
     {
         name: 'Instagram',
@@ -47,14 +47,14 @@ const socialLinks = [
 
 <template>
     <div class="space-y-6">
-        <h2 class="text-2xl font-bold text-[#e8f4ff] font-mono mb-8 flex items-center gap-3">
-            <span class="w-2 h-8 bg-[#00f0ff]"></span>
+        <h2 class="text-2xl font-bold text-[var(--text-heading)] font-mono mb-8 flex items-center gap-3">
+            <span class="w-2 h-8 bg-[var(--accent)]"></span>
             CONNECT_
         </h2>
 
         <div class="grid gap-4">
             <a v-for="social in socialLinks" :key="social.name" :href="social.link" target="_blank"
-                class="group flex items-center gap-4 p-4 bg-[#0a0a14] border border-[#2d2d3a] hover:border-opacity-100 rounded-lg transition-all duration-300 hover:translate-x-2"
+                class="group flex items-center gap-4 p-4 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-lg transition-all duration-300 hover:translate-x-2"
                 :class="`hover:${social.borderColor}`">
 
                 <div class="p-3 bg-white/5 rounded-full group-hover:bg-white/10 transition-colors">
@@ -62,12 +62,12 @@ const socialLinks = [
                 </div>
 
                 <div>
-                    <h3 class="text-[#e8f4ff] font-mono font-bold text-sm">{{ social.name }}</h3>
-                    <p class="text-[#a0a0b0] text-sm group-hover:text-white transition-colors">{{ social.value }}</p>
+                    <h3 class="text-[var(--text-heading)] font-mono font-bold text-sm">{{ social.name }}</h3>
+                    <p class="text-[var(--text-nav)] text-sm group-hover:text-[var(--text-heading)] transition-colors">{{ social.value }}</p>
                 </div>
 
                 <div class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span class="text-xs font-mono text-[#00f0ff]">>></span>
+                    <span class="text-xs font-mono text-[var(--accent)]">>></span>
                 </div>
             </a>
         </div>

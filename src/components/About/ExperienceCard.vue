@@ -39,31 +39,31 @@ const resetTilt = () => {
 <template>
     <div ref="tiltCard" @mousemove="handleTiltMove" @mouseleave="resetTilt"
         class="relative perspective-1000 group w-full">
-        <div class="w-full relative p-4 md:p-6 bg-[#0a0a14]/80 backdrop-blur-sm border border-[#00f0ff]/10 rounded-lg transition-transform duration-100 ease-linear shadow-[0_0_20px_rgba(0,240,255,0.05)] transform-style-3d hover:border-[#00f0ff]/30"
+        <div class="w-full relative p-4 md:p-6 bg-[var(--bg-secondary)]/80 backdrop-blur-sm border border-[var(--accent)]/10 rounded-lg transition-transform duration-100 ease-linear shadow-[0_0_20px_rgba(var(--accent-rgb),0.05)] transform-style-3d hover:border-[var(--accent)]/30"
             :style="{ transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)` }">
             <!-- Header -->
             <div class="flex flex-col gap-1 mb-3 relative z-10"
                 :class="index % 2 === 0 ? 'items-start' : 'md:items-end'">
-                <span class="md:hidden text-[#00f0ff] text-xs font-mono mb-1">
+                <span class="md:hidden text-[var(--accent)] text-xs font-mono mb-1">
                     {{ item.year }}
                 </span>
                 <span
-                    class="text-[#00f0ff] text-xs font-bold tracking-wider px-2 py-0.5 rounded bg-[#00f0ff]/10 border border-[#00f0ff]/20">
+                    class="text-[var(--accent)] text-xs font-bold tracking-wider px-2 py-0.5 rounded bg-[var(--accent)]/10 border border-[var(--accent)]/20">
                     {{ item.category }}
                 </span>
-                <h4 class="text-white text-lg font-bold">{{ item.project }}</h4>
-                <span class="text-[#a0a0b0] text-sm italic">{{ item.role }}</span>
+                <h4 class="text-[var(--text-heading)] text-lg font-bold">{{ item.project }}</h4>
+                <span class="text-[var(--text-nav)] text-sm italic">{{ item.role }}</span>
             </div>
 
             <!-- Description -->
-            <p class="text-[#c0c0d0] text-sm leading-relaxed mb-4 relative z-10">
+            <p class="text-[var(--text-body)] text-sm leading-relaxed mb-4 relative z-10">
                 {{ item.description }}
             </p>
 
             <!-- Tech Tags -->
             <div class="flex flex-wrap gap-2 relative z-10"
                 :class="index % 2 === 0 ? 'justify-start' : 'md:justify-end'">
-                <span v-for="tech in item.tech" :key="tech" class="text-xs text-[#00f0ff]/80 font-mono">
+                <span v-for="tech in item.tech" :key="tech" class="text-xs text-[var(--accent)]/80 font-mono">
                     #{{ tech }}
                 </span>
             </div>

@@ -44,7 +44,7 @@ onMounted(() => {
 <template>
     <div class="relative max-w-4xl mx-auto py-12 px-4 font-mono">
         <!-- Green Grid Background -->
-        <div class="absolute inset-0 opacity-10 pointer-events-none"
+        <div class="absolute inset-0 opacity-[calc(var(--grid-opacity)*0.5)] pointer-events-none"
             style="background-image: linear-gradient(#00ff9d 1px, transparent 1px), linear-gradient(90deg, #00ff9d 1px, transparent 1px); background-size: 40px 40px; mask-image: radial-gradient(circle, black 40%, transparent 70%);">
         </div>
 
@@ -53,7 +53,7 @@ onMounted(() => {
             <h3 class="text-[#00ff9d] text-xl font-bold tracking-[0.2em] mb-2 uppercase">
                 // Education Level
             </h3>
-            <p class="text-[#a0a0b0] text-sm">Academic Background</p>
+            <p class="text-[var(--text-nav)] text-sm">Academic Background</p>
         </div>
 
         <!-- Timeline Container -->
@@ -83,13 +83,13 @@ onMounted(() => {
 
                     <!-- Node/Marker -->
                     <div
-                        class="absolute left-4 md:left-1/2 -translate-x-[5px] md:-translate-x-1/2 w-[10px] h-[10px] rounded-full bg-[#050510] border-2 border-[#00ff9d] z-10 shadow-[0_0_10px_#00ff9d]">
+                        class="absolute left-4 md:left-1/2 -translate-x-[5px] md:-translate-x-1/2 w-[10px] h-[10px] rounded-full bg-[var(--bg-primary)] border-2 border-[#00ff9d] z-10 shadow-[0_0_10px_#00ff9d]">
 
                         <!-- Date Label - Floating desktop only, strict side placement -->
                         <div class="hidden md:block absolute top-1/2 -translate-y-1/2 w-max"
                             :class="index % 2 === 0 ? 'right-full mr-8' : 'left-full ml-8'">
                             <span
-                                class="text-[#00ff9d] font-bold text-sm bg-[#050510] px-2 py-1 border border-[#00ff9d]/30 rounded">
+                                class="text-[#00ff9d] font-bold text-sm bg-[var(--bg-primary)] px-2 py-1 border border-[#00ff9d]/30 rounded">
                                 {{ item.year }}
                             </span>
                         </div>
