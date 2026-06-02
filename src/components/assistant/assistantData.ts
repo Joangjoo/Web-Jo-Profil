@@ -16,10 +16,10 @@ export const profileData = {
   role: "Frontend, Backend, & Fullstack Developer",
   status: "Mahasiswa Informatika semester 7",
   summaries: [
-    "Sholahudin Jauhari El Sya'na adalah Fullstack Developer (Vue, React, Laravel) yang juga mahasiswa Informatika UAD semester 7. Dia berfokus pada pembuatan aplikasi web modern yang clean dan performant.",
+    "Sholahudin Jauhari El Sya'na adalah Fullstack Developer (Vue, React, Laravel) yang juga mahasiswa Informatika UAD. Dia berfokus pada pembuatan aplikasi web modern yang clean dan performant.",
     "Jo adalah pengembang web kreatif dengan keahlian di Frontend (Vue/React) dan Backend (Laravel). Saat ini ia menempuh semester 7 di Universitas Ahmad Dahlan.",
     "Dikenal sebagai Joangjo, ia adalah mahasiswa Informatika UAD yang aktif membangun portofolio web apps, mulai dari sistem informasi sekolah hingga website bisnis, menggunakan teknologi terkini.",
-    "Selain kuliah di semester 7 Informatika UAD, Sholahudin aktif mengerjakan proyek freelance fullstack dan terus mendalami React serta Laravel untuk solusi digital yang efisien.",
+    "Selain kuliah di Informatika UAD, Sholahudin aktif mengerjakan proyek freelance fullstack dan terus mendalami React serta Laravel untuk solusi digital yang efisien.",
   ],
 };
 
