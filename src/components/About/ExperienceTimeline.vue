@@ -3,6 +3,10 @@ import { ref, computed, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 import ExperienceCard from './ExperienceCard.vue';
 
+const props = defineProps<{
+    activeRole: 'fullstack' | 'frontend' | 'backend';
+}>();
+
 const { t } = useI18n();
 
 interface TimelineItem {
@@ -126,10 +130,9 @@ onMounted(() => {
                     index % 2 === 0 ? 'md:flex-row-reverse' : ''
                 ]">
 
-                    <!-- Content Side -->
                     <div class="w-full md:w-1/2 pl-12 md:pl-0 md:px-8 text-left"
                         :class="index % 2 === 0 ? 'md:text-left' : 'md:text-right'">
-                        <ExperienceCard :item="item" :index="index" />
+                        <ExperienceCard :item="item" :index="index" :activeRole="props.activeRole" />
                     </div>
 
                     <!-- Node/Marker -->

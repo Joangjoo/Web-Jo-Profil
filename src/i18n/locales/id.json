@@ -51,8 +51,14 @@
       "first_name": "Sholahudin",
       "last_name": "Jauhari",
       "role": "Fullstack Developer",
+      "role_fe": "Frontend Developer",
+      "role_be": "Backend Developer",
       "bio_1": "Halo! Saya Sholahudin, seorang Fullstack Web Developer dan mahasiswa Informatika di Universitas Ahmad Dahlan. Saya senang membangun aplikasi web modern yang menggabungkan performa, skalabilitas, dan pengalaman pengguna yang baik.",
+      "bio_1_fe": "Halo! Saya Sholahudin, seorang Frontend Web Developer dan mahasiswa Informatika di Universitas Ahmad Dahlan. Saya senang membangun antarmuka web modern yang mengedepankan performa, kegunaan, dan kenyamanan interaksi pengguna.",
+      "bio_1_be": "Halo! Saya Sholahudin, seorang Backend Web Developer dan mahasiswa Informatika di Universitas Ahmad Dahlan. Saya berfokus pada pembangunan logika server, arsitektur database, dan REST API yang aman, andal, serta berkinerja tinggi.",
       "bio_2": "Dengan pengalaman dari tiga magang dan berbagai proyek freelance, saya telah mengerjakan Sistem Informasi Sekolah, Platform Distribusi Tenaga Kerja, Sistem Manajemen Rental, dan Website Profil Bisnis. Saya berspesialisasi dalam React, Vue, TypeScript, Laravel, dan MySQL, mengubah ide menjadi solusi digital yang andal dan berdampak.",
+      "bio_2_fe": "Dengan pengalaman dari tiga magang dan berbagai proyek freelance, saya telah menggarap berbagai slicing UI interaktif, integrasi API real-time (SSE), serta dashboard interaktif. Spesialisasi saya meliputi React, Vue, TypeScript, dan Tailwind CSS untuk menciptakan produk digital yang intuitif.",
+      "bio_2_be": "Dengan pengalaman dari tiga magang dan berbagai proyek freelance, saya terbiasa mengelola sistem administrasi database MySQL/PostgreSQL, membangun REST API, dan mengembangkan dashboard admin dengan Laravel dan FilamentPHP untuk solusi digital yang skalabel.",
       "tech_stack_title": "Tech Stack",
       "download_cv": "Unduh CV Saya"
     },
@@ -63,51 +69,79 @@
         {
           "year": "Februari 2026 - April 2026",
           "category": "Magang",
-          "role": "Backend Developer Intern",
+          "role": "Fullstack Developer Intern",
+          "role_fe": "Frontend Developer Intern",
+          "role_be": "Backend Developer Intern",
           "project": "PT Razen Teknologi Indonesia",
-          "description": "Berkontribusi dalam pengembangan Sistem Informasi Distribusi Tenaga Kerja & Kesiapan Kerja, sebuah platform multi-stakeholder yang menghubungkan sekolah, siswa, perusahaan, dan instansi pemerintah."
+          "description": "Berkontribusi dalam pengembangan Sistem Informasi Distribusi Tenaga Kerja & Kesiapan Kerja, sebuah platform multi-stakeholder yang menghubungkan sekolah, siswa, perusahaan, dan instansi pemerintah.",
+          "description_fe": "Berkontribusi dalam pengembangan frontend platform Distribusi Tenaga Kerja menggunakan React.js dan Tailwind CSS, merancang antarmuka multi-stakeholder yang responsif untuk siswa dan perusahaan.",
+          "description_be": "Membangun dan mengoptimalkan REST API serta arsitektur database PostgreSQL untuk sistem manajemen tenaga kerja menggunakan Laravel, di-deploy menggunakan Docker."
         },
         {
           "year": "Oktober 2025 - Januari 2026",
           "category": "Magang",
           "role": "Fullstack Developer Intern",
+          "role_fe": "Frontend Developer Intern",
+          "role_be": "Backend Developer Intern",
           "project": "Horus Technology",
-          "description": "Berkontribusi dalam pengembangan software enterprise berbasis AI. Fokus pada pengembangan frontend untuk software TING, termasuk implementasi UI, integrasi backend API, dan penanganan data real-time menggunakan Server-Sent Events (SSE). Juga mengembangkan dan mendesain ulang website perusahaan, membangun demo Agentic AI, dan berkolaborasi erat dengan backend engineer, tim produk, dan CEO."
+          "description": "Berkontribusi dalam pengembangan software enterprise berbasis AI. Fokus pada pengembangan frontend untuk software TING, termasuk implementasi UI, integrasi backend API, dan penanganan data real-time menggunakan Server-Sent Events (SSE). Juga mengembangkan dan mendesain ulang website perusahaan, membangun demo Agentic AI, dan berkolaborasi erat dengan backend engineer, tim produk, dan CEO.",
+          "description_fe": "Fokus pada pengembangan frontend aplikasi enterprise berbasis AI (TING) menggunakan Vue.js, integrasi REST API, penanganan data real-time dengan Server-Sent Events (SSE), dan redesign website perusahaan.",
+          "description_be": "Membantu merancang endpoint API untuk integrasi modul AI, mengoptimalkan throughput server untuk real-time data streaming (SSE), dan berkolaborasi dalam pemodelan data backend software TING."
         },
         {
           "year": "April 2025 - Juli 2025",
           "category": "Magang",
           "role": "Fullstack Developer Intern",
+          "role_fe": "Frontend Developer Intern",
+          "role_be": "Backend Developer Intern",
           "project": "Sistem Informasi Sekolah – SD Muhammadiyah Bausasran",
-          "description": "Mengembangkan Sistem Informasi Sekolah yang lengkap meliputi website profil sekolah dinamis, panel admin, dan sistem PPDB online. Secara mandiri menangani pengembangan frontend dan backend, manajemen database, dan fitur manajemen konten untuk administrator."
+          "description": "Mengembangkan Sistem Informasi Sekolah yang lengkap meliputi website profil sekolah dinamis, panel admin, dan sistem PPDB online. Secara mandiri menangani pengembangan frontend dan backend, manajemen database, dan fitur manajemen konten untuk administrator.",
+          "description_fe": "Merancang UI sekolah yang dinamis, sistem pendaftaran siswa baru (PPDB) yang responsif, serta dashboard admin interaktif menggunakan FilamentPHP dan Tailwind CSS.",
+          "description_be": "Membangun core logic pendaftaran online (PPDB), mengelola database MySQL sekolah, dan membangun panel manajemen konten dinamis menggunakan Laravel & FilamentPHP."
         },
         {
           "year": "2025",
           "category": "Freelance",
           "role": "Fullstack Web Developer",
+          "role_fe": "Frontend Developer",
+          "role_be": "Backend Developer",
           "project": "Website Rental Mobil",
-          "description": "Membangun aplikasi web fullstack responsif untuk bisnis rental mobil. Mengembangkan backend Laravel dan frontend React TypeScript, termasuk fitur admin untuk mengelola kendaraan, jadwal sewa, dan data pelanggan."
+          "description": "Membangun aplikasi web fullstack responsif untuk bisnis rental mobil. Mengembangkan backend Laravel dan frontend React TypeScript, termasuk fitur admin untuk mengelola kendaraan, jadwal sewa, dan data pelanggan.",
+          "description_fe": "Mengembangkan antarmuka penyewaan mobil yang responsif dengan React & TypeScript, mencakup form jadwal sewa interaktif dan dashboard pelanggan.",
+          "description_be": "Membangun sistem manajemen mobil, scheduling logik sewa, penghitungan tarif otomatis, dan REST API backend menggunakan Laravel & MySQL."
         },
         {
           "year": "2025",
           "category": "Proyek Sekolah",
           "role": "Project Manager & Frontend Developer",
+          "role_fe": "Project Manager & Frontend Developer",
+          "role_be": "Project Manager & Backend Developer",
           "project": "Website Bisnis Tri Jaya Agung",
-          "description": "Mengembangkan website profil bisnis untuk toko bahan bangunan dengan katalog produk dinamis. Mengintegrasikan panel admin untuk manajemen konten dan fokus pada UI/UX yang bersih untuk meningkatkan kredibilitas bisnis."
+          "description": "Mengembangkan website profil bisnis untuk toko bahan bangunan dengan katalog produk dinamis. Mengintegrasikan panel admin untuk manajemen konten dan fokus pada UI/UX yang bersih untuk meningkatkan kredibilitas bisnis.",
+          "description_fe": "Memimpin slicing UI katalog produk interaktif, merancang alur navigasi produk toko bangunan, dan memastikan transisi visual yang bersih menggunakan Tailwind CSS.",
+          "description_be": "Mengatur alur manajemen proyek database katalog produk, mengintegrasikan admin panel untuk edit produk, dan manajemen data inventori toko."
         },
         {
           "year": "2025",
           "category": "Freelance",
           "role": "Fullstack Web Developer",
+          "role_fe": "Frontend Developer",
+          "role_be": "Backend Developer",
           "project": "Sistem Manajemen Pondok Pesantren",
-          "description": "Membangun sistem manajemen sekolah untuk mendigitalisasi tugas administratif, termasuk manajemen data siswa, penjadwalan kegiatan, dan pembaruan berita. Mendesain dashboard admin yang ramah pengguna untuk operator sekolah."
+          "description": "Membangun sistem manajemen sekolah untuk mendigitalisasi tugas administratif, termasuk manajemen data siswa, penjadwalan kegiatan, dan pembaruan berita. Mendesain dashboard admin yang ramah pengguna untuk operator sekolah.",
+          "description_fe": "Merancang antarmuka dashboard admin untuk operator sekolah, manajemen data santri, dan tata letak berita dinamis dengan React TypeScript.",
+          "description_be": "Membangun modul backend registrasi santri, relasi database untuk jadwal kegiatan, dan manajemen berita menggunakan Laravel & MySQL."
         },
         {
           "year": "2024",
           "category": "Kompetisi",
           "role": "Frontend Developer",
+          "role_fe": "Frontend Developer",
+          "role_be": "Web Optimizer",
           "project": "Website Destinasi Wisata",
-          "description": "Mendesain dan mengembangkan website destinasi wisata responsif untuk proyek kompetisi, berfokus pada visual storytelling, tata letak responsif, dan animasi halus menggunakan AOS."
+          "description": "Mendesain dan mengembangkan website destinasi wisata responsif untuk proyek kompetisi, berfokus pada visual storytelling, tata letak responsif, dan animasi halus menggunakan AOS.",
+          "description_fe": "Merancang visual storytelling pariwisata yang kaya animasi menggunakan Tailwind CSS & AOS, mengoptimalkan responsivitas layout untuk kenyamanan pengguna mobile.",
+          "description_be": "Mengoptimalkan aset gambar pariwisata dan script loading untuk performa web statis maksimal, serta integrasi form pemesanan lokal."
         }
       ]
     },

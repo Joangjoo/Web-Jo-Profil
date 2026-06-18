@@ -51,8 +51,14 @@
       "first_name": "Sholahudin",
       "last_name": "Jauhari",
       "role": "Fullstack Developer",
+      "role_fe": "Frontend Developer",
+      "role_be": "Backend Developer",
       "bio_1": "Hey there! I'm Sholahudin, a Fullstack Web Developer and Informatics student at Ahmad Dahlan University. I enjoy building modern web applications that combine performance, scalability, and great user experiences.",
+      "bio_1_fe": "Hello! I'm Sholahudin, a Frontend Web Developer and IT student at Universitas Ahmad Dahlan. I enjoy building modern web interfaces that prioritize performance, usability, and smooth user interactions.",
+      "bio_1_be": "Hello! I'm Sholahudin, a Backend Web Developer and IT student at Universitas Ahmad Dahlan. I focus on building secure, reliable, and high-performance server logic, database architectures, and REST APIs.",
       "bio_2": "With experience from three internships and multiple freelance projects, I've worked on School Information Systems, Workforce Distribution Platforms, Rental Management Systems, and Business Profile Websites. I specialize in React, Vue, TypeScript, Laravel, and MySQL, turning ideas into reliable and impactful digital solutions.",
+      "bio_2_fe": "With experience from three internships and various freelance projects, I have worked on interactive UI slicing, real-time API integration (SSE), and interactive dashboards. My specialties include React, Vue, TypeScript, and Tailwind CSS to create intuitive digital products.",
+      "bio_2_be": "With experience from three internships and various freelance projects, I am accustomed to managing MySQL/PostgreSQL database administration, building REST APIs, and developing admin dashboards using Laravel and FilamentPHP for scalable digital solutions.",
       "tech_stack_title": "Tech Stack",
       "download_cv": "Download My CV"
     },
@@ -63,51 +69,79 @@
         {
           "year": "February 2026 - April 2026",
           "category": "Internship",
-          "role": "Backend Developer Intern",
+          "role": "Fullstack Developer Intern",
+          "role_fe": "Frontend Developer Intern",
+          "role_be": "Backend Developer Intern",
           "project": "PT Razen Teknologi Indonesia",
-          "description": "Contributed to the development of a Workforce Distribution & Job Readiness Information System, a multi-stakeholder platform connecting schools, students, companies, and government institutions."
+          "description": "Contributed to the development of a Workforce Distribution & Job Readiness Information System, a multi-stakeholder platform connecting schools, students, companies, and government institutions.",
+          "description_fe": "Contributed to the frontend development of the Workforce Distribution platform using React.js and Tailwind CSS, designing responsive multi-stakeholder interfaces for students and companies.",
+          "description_be": "Built and optimized REST APIs and PostgreSQL database architecture for the workforce management system using Laravel, deployed using Docker containers."
         },
         {
           "year": "October 2025 - January 2026",
           "category": "Internship",
           "role": "Fullstack Developer Intern",
+          "role_fe": "Frontend Developer Intern",
+          "role_be": "Backend Developer Intern",
           "project": "Horus Technology",
-          "description": "Contributed to the development of AI-driven enterprise software. Focused on frontend development for TING software, including UI implementation, backend API integration, and real-time data handling using Server-Sent Events (SSE). Also developed and redesigned company websites, built an Agentic AI demo, and collaborated closely with backend engineers, product teams, and the CEO."
+          "description": "Contributed to the development of AI-driven enterprise software. Focused on frontend development for TING software, including UI implementation, backend API integration, and real-time data handling using Server-Sent Events (SSE). Also developed and redesigned company websites, built an Agentic AI demo, and collaborated closely with backend engineers, product teams, and the CEO.",
+          "description_fe": "Focused on the frontend development of the AI-based enterprise software (TING) using Vue.js, REST API integration, handling real-time data with Server-Sent Events (SSE), and company website redesign.",
+          "description_be": "Assisted in designing API endpoints for AI module integration, optimizing server throughput for real-time data streaming (SSE), and collaborating on data modeling for the TING software."
         },
         {
           "year": "April 2025 - July 2025",
           "category": "Internship",
           "role": "Fullstack Developer Intern",
+          "role_fe": "Frontend Developer Intern",
+          "role_be": "Backend Developer Intern",
           "project": "School Information System – SD Muhammadiyah Bausasran",
-          "description": "Developed a full-featured School Information System including a dynamic school profile website, admin panel, and online student admission (PPDB) system. Independently handled frontend and backend development, database management, and content management features for administrators."
+          "description": "Developed a full-featured School Information System including a dynamic school profile website, admin panel, and online student admission (PPDB) system. Independently handled frontend and backend development, database management, and content management features for administrators.",
+          "description_fe": "Designed a dynamic school UI, responsive student registration system (PPDB), and interactive admin dashboard using FilamentPHP and Tailwind CSS.",
+          "description_be": "Built the core online registration (PPDB) logic, managed the school's MySQL database, and constructed dynamic content management panels using Laravel & FilamentPHP."
         },
         {
           "year": "2025",
           "category": "Freelance",
           "role": "Fullstack Web Developer",
+          "role_fe": "Frontend Developer",
+          "role_be": "Backend Developer",
           "project": "Car Rental Website",
-          "description": "Built a responsive fullstack web application for a car rental business. Developed a Laravel backend and React TypeScript frontend, including admin features for managing vehicles, rental schedules, and customer data."
+          "description": "Built a responsive fullstack web application for a car rental business. Developed a Laravel backend and React TypeScript frontend, including admin features for managing vehicles, rental schedules, and customer data.",
+          "description_fe": "Developed a responsive car rental interface with React & TypeScript, including interactive booking schedule forms and customer dashboards.",
+          "description_be": "Built the car management system, rental scheduling logic, automatic fare calculation, and backend REST APIs using Laravel & MySQL."
         },
         {
           "year": "2025",
           "category": "Project School",
           "role": "Project Manager & Frontend Developer",
+          "role_fe": "Project Manager & Frontend Developer",
+          "role_be": "Project Manager & Backend Developer",
           "project": "Tri Jaya Agung Business Website",
-          "description": "Developed a business profile website for a building materials store with a dynamic product catalog. Integrated an admin panel for content management and focused on clean UI/UX to improve business credibility."
+          "description": "Developed a business profile website for a building materials store with a dynamic product catalog. Integrated an admin panel for content management and focused on clean UI/UX to improve business credibility.",
+          "description_fe": "Led the UI slicing of the interactive product catalog, designed construction store navigation flows, and ensured clean visual transitions using Tailwind CSS.",
+          "description_be": "Managed project catalog database flows, integrated the admin panel for product editing, and managed store inventory data."
         },
         {
           "year": "2025",
           "category": "Freelance",
           "role": "Fullstack Web Developer",
+          "role_fe": "Frontend Developer",
+          "role_be": "Backend Developer",
           "project": "Boarding School Management System",
-          "description": "Built a school management system to digitize administrative tasks, including student data management, activity scheduling, and news updates. Designed a user-friendly admin dashboard for school operators."
+          "description": "Built a school management system to digitize administrative tasks, including student data management, activity scheduling, and news updates. Designed a user-friendly admin dashboard for school operators.",
+          "description_fe": "Designed the admin dashboard interface for school operators, student data management, and dynamic news layouts with React TypeScript.",
+          "description_be": "Built the student registration backend modules, database relations for activity schedules, and news management using Laravel & MySQL."
         },
         {
           "year": "2024",
           "category": "Competition",
           "role": "Frontend Developer",
+          "role_fe": "Frontend Developer",
+          "role_be": "Web Optimizer",
           "project": "Tourism Destination Website",
-          "description": "Designed and developed a responsive tourism destination website for a competition project, focusing on visual storytelling, responsive layout, and smooth animations using AOS."
+          "description": "Designed and developed a responsive tourism destination website for a competition project, focusing on visual storytelling, responsive layout, and smooth animations using AOS.",
+          "description_fe": "Designed rich animated tourism storytelling using Tailwind CSS & AOS, optimizing layout responsiveness for mobile user experience.",
+          "description_be": "Optimized tourism image assets and loading scripts for maximum static web performance, along with integrating local booking forms."
         }
       ]
     },
