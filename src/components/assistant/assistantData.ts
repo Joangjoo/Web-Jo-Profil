@@ -77,7 +77,7 @@ export const assistantKnowledge: AssistantData[] = [
   },
   {
     keywords: ["freelance", "proyek freelance", "pekerjaan lepas", "client"],
-    answer: "Jo sudah mengerjakan beberapa proyek freelance: 1) Car Rental Website — platform rental mobil dengan manajemen kendaraan dan jadwal sewa. 2) Boarding School Management System — sistem manajemen pondok pesantren untuk data santri, jadwal, dan berita. 3) Tri Jaya Agung Business Profile — website profil toko bangunan dengan katalog produk dan admin panel. Semua pakai React + TypeScript + Laravel + FilamentPHP + MySQL.",
+    answer: "Jo sudah mengerjakan beberapa proyek freelance: 1) Car Rental Website — platform rental mobil dengan manajemen kendaraan dan jadwal sewa. 2) Boarding School Management System — sistem manajemen pondok pesantren untuk data santri, jadwal, dan berita. 3) Tri Jaya Agung Business Profile — website profil toko bangunan dengan katalog produk dan admin panel. 4) Freelance Management System (FMS) — platform all-in-one untuk freelancer mengelola proyek, tugas, dan keuangan menggunakan React (TSX), Vite, Tailwind CSS, dan Laravel API.",
   },
   {
     keywords: ["rental", "rental mobil", "car rental"],
@@ -97,7 +97,11 @@ export const assistantKnowledge: AssistantData[] = [
   },
   {
     keywords: ["project", "proyek", "portofolio", "karya", "website"],
-    answer: "Proyek-proyek Jo: 1) Website E-Commerce Toko Roti (HTML, PHP, JS, Tailwind). 2-3) Slicing UI Web Coffee (HTML, CSS, JS, Tailwind). 4) Website Destination (HTML, CSS, JS, Tailwind). 5) Website Perpustakaan (React, Tailwind, AOS). 6) Student Org Database (HTML, Tailwind, AOS). 7) Website Budaya (HTML, CSS, JS, Tailwind). 8) Website Destination (HTML, CSS, JS, Tailwind). 9) Shoe Store UI/UX Design (Figma). Detailnya lihat di halaman Projects!",
+    answer: "Proyek-proyek Jo: 1) Website E-Commerce Toko Roti (HTML, PHP, JS, Tailwind). 2-3) Slicing UI Web Coffee (HTML, CSS, JS, Tailwind). 4) Website Destination (HTML, CSS, JS, Tailwind). 5) Website Perpustakaan (React, Tailwind, AOS). 6) Student Org Database (HTML, Tailwind, AOS). 7) Website Budaya (HTML, CSS, JS, Tailwind). 8) Website Destination (HTML, CSS, JS, Tailwind). 9) Shoe Store UI/UX Design (Figma). 10) Freelance Management System (React, Vite, Tailwind, Laravel). Detailnya lihat di halaman Projects!",
+  },
+  {
+    keywords: ["fms", "freelance management system", "freelance management", "sistem freelance"],
+    answer: "Freelance Management System (FMS) adalah platform all-in-one untuk freelancer mengelola proyek, tugas, dan keuangan. Fiturnya meliputi dashboard interaktif dengan grafik, project board dengan pelacakan anggaran, detail tugas dengan checklist & unggah file (PDF, ZIP, PNG, Figma), modul keuangan pelacak invoice, serta tampilan kalender deadline. Stack: React (TSX), Vite, Tailwind CSS, dan Laravel API.",
   },
   {
     keywords: ["ecommerce", "toko roti", "bakery"],
@@ -181,7 +185,7 @@ export const assistantKnowledge: AssistantData[] = [
   },
   {
     keywords: ["project page", "projects", "halaman project"],
-    answer: "Halaman Projects menampilkan semua karya Jo — dari e-commerce, slicing UI, website pariwisata, web perpustakaan, sampai UI/UX design di Figma. Masing-masing project ada deskripsi dan link detail. Total ada 9 project!",
+    answer: "Halaman Projects menampilkan semua karya Jo — dari e-commerce, slicing UI, website pariwisata, web perpustakaan, UI/UX design di Figma, hingga Freelance Management System. Masing-masing project ada deskripsi dan link detail. Total ada 10 project!",
   },
   {
     keywords: ["certificate", "certificates", "sertifikat"],

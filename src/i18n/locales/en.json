@@ -238,6 +238,10 @@
       {
         "title": "Shoe Store Web Design",
         "description": "UI/UX design concept for a shoe store website with a mobile-first approach, focusing on usability, modern aesthetics, and intuitive navigation across web devices."
+      },
+      {
+        "title": "Freelance Management System (FMS)",
+        "description": "An all-in-one freelance management platform featuring an interactive dashboard, budget-tracked project boards with automatic progress indicators, checklist task details, file uploads, client invoice tracking, and a task deadline calendar view."
       }
     ]
   },

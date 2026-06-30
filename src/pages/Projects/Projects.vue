@@ -16,6 +16,7 @@ import projek6 from '../../assets/projects/projek6.png';
 import projek7 from '../../assets/projects/projek7.png';
 import projek8 from '../../assets/projects/projek8.png';
 import sepatu from '../../assets/projects/sepatu.png';
+import projek9 from '../../assets/projects/projek9.jpeg';
 
 // Filter categories
 const activeFilter = ref('All');
@@ -99,6 +100,15 @@ const projects = computed(() => [
         image: sepatu,
         tech: ["Figma", "UI/UX", "Web Design"],
         category: "UI/UX",
+        demoLink: "#",
+        repoLink: "#"
+    },
+    {
+        title: t('projects.entries.9.title'),
+        description: t('projects.entries.9.description'),
+        image: projek9,
+        tech: ["React (TSX)", "Vite", "Tailwind CSS", "Laravel API"],
+        category: "Web",
         demoLink: "#",
         repoLink: "#"
     }

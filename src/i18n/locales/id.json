@@ -238,6 +238,10 @@
       {
         "title": "Shoe Store Web Design",
         "description": "Konsep desain UI/UX untuk website toko sepatu dengan pendekatan mobile-first, fokus pada kegunaan, estetika modern, dan navigasi intuitif di berbagai perangkat."
+      },
+      {
+        "title": "Freelance Management System (FMS)",
+        "description": "Platform manajemen freelance all-in-one yang dilengkapi dashboard ringkasan, project board dengan pelacakan anggaran & indikator kemajuan otomatis, detail tugas dengan checklist & unggah berkas, modul keuangan pelacak invoice, serta tampilan kalender deadline tugas."
       }
     ]
   },
